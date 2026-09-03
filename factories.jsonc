@@ -1,0 +1,151 @@
+//  intro file to scripts/2-pools-with-balances.ts
+[
+  {
+    "factory": "0xB81881Fd95140a6e2a217f7bF1fb67C0e956f472",
+    "chainIds": [1],
+    "eventSignature": "PoolCreated(address,address,address,address,bytes32)",
+    "abiVersion": 1,
+    "deploymentBlocks": [
+      24322024
+    ]
+  },
+  {
+    "factory": "0x5d09437cfD768bee946C5480E770c6937df510A8",
+    "chainIds": [1, 8453, 42161],
+    "eventSignature": "PoolCreated(address,address,address,address,bytes32)",
+    "abiVersion": 1,
+    "deploymentBlocks": [
+      24483758,
+      42314774,
+      433398851
+    ]
+  },
+  {
+    "factory": "0x5E20CC16CbEa4d8b1618bD7860974cc5EDf23df0",
+    "chainIds": [1, 8453, 42161],
+    "eventSignature": "PoolCreated(address,address,address,address,bytes32)",
+    "abiVersion": 1,
+    "deploymentBlocks": [
+      24485421,
+      42324453,
+      433475678
+    ]
+  },
+  {
+    "factory": "0xe22F9fc0f04486dE25ed6CF1800a4a47aFD82e0C",
+    "chainIds": [1, 8453, 42161, 43114, 56, 137, 4326, 999, 143, 4663],
+    "eventSignature": "PoolCreated(address,address,address,address,bytes32)",
+    "abiVersion": 1,
+    "deploymentBlocks": [
+      24521185,
+      42540736,
+      435210755,
+      78822864,
+      82964761,
+      83380134,
+      9083666,
+      30774348,
+      64807339,
+      9477535
+    ]
+  },
+  {
+    "factory": "0x16127C59c80df69E069D0d237fc776c9FEaE4b16",
+    "chainIds": [4663],
+    "eventSignature": "PoolCreated(address,address,address,address,bytes32)",
+    "abiVersion": 1,
+    "deploymentBlocks": [
+      9459671
+    ]
+  },
+  {
+    "factory": "0x93e314a9a65a15f3c3bc039bb4261dbbbc343fba",
+    "chainIds": [1],
+    "eventSignature": "PoolCreated(address,address,address,uint256,address,address,address,address,address,uint256,uint256,uint256,uint256,bool,uint24,uint24,uint24,uint24,address,int24,uint256[],uint256[])",
+    "abiVersion": 2,
+    "deploymentBlocks": [
+      25072190
+    ]
+  },
+  {
+    "factory": "0xf98aD80FE666B9a23075CdF64aF5971802844Fd8",
+    "chainIds": [1],
+    "eventSignature": "PoolCreated(address,address,address,uint256,address,address,address,address,address,uint256,uint256,uint256,uint256,bool,uint24,uint24,uint24,uint24,address,int24,uint256[],uint256[])",
+    "abiVersion": 2,
+    "deploymentBlocks": [
+      25125440
+    ]
+  },
+  {
+    "factory": "0xDd41F182630A395E2ED8b9c1D5f1E22F1f9b133a",
+    "chainIds": [1, 8453],
+    "eventSignature": "PoolCreated(address,address,address,uint256,address,address,address,address,uint16,uint256,uint256,uint256,uint256,uint24,uint24,uint24,uint24,address,int24,uint256[],uint256[])",
+    "abiVersion": 3,
+    "deploymentBlocks": [
+      25269976,
+      47049945
+    ]
+  },
+  {
+    "factory": "0x175851292f22621F337D76fE5445e9372fb06f9C",
+    "chainIds": [1, 8453],
+    "eventSignature": "PoolCreated(address,address,address,uint256,address,address,address,address[],(uint256,uint256,uint256,uint256,uint256,uint256),uint256,uint256,uint256,uint256,uint24,uint24,uint24,uint24,address,int24,uint256[],uint256[])",
+    "abiVersion": 4,
+    "deploymentBlocks": [
+      25329902,
+      47410979
+    ]
+  },
+  {
+    "factory": "0x567C7205107257650dC73a73d87b879a45F5b6F6",
+    "chainIds": [1, 8453],
+    "eventSignature": "PoolCreated(address,address,address,uint256,address,address,address,address[],(uint256,uint256,uint256,uint256,uint256,uint256),uint256,uint256,uint256,uint256,uint24,uint24,uint24,uint24,address,int24,uint256[],uint256[])",
+    "abiVersion": 4,
+    "deploymentBlocks": [
+      25347935,
+      47519301
+    ]
+  },
+  {
+    "factory": "0xf91843fda7d8cec2f3e6104d29836e636d4e7c9c",
+    "chainIds": [1, 8453, 4663],
+    "eventSignature": "PoolCreated(address,address,address,uint256,address,address,address,address[],(uint256,uint256,uint256,uint256,uint256,uint256),uint256,uint256,uint256,uint256,uint24,uint24,uint24,uint24,address,int24,uint256[],uint256[])",
+    "abiVersion": 4,
+    "deploymentBlocks": [
+      25523569,
+      48577416,
+      8652220
+    ]
+  },
+  {
+    "factory": "0x622911384e7973439b8be305f5e3Fc3c5736EDe4",
+    "chainIds": [1, 8453, 4663, 999, 42161],
+    "eventSignature": "PoolCreated(address,address,address,uint256,address,address,address,address[],(uint256,uint256,uint256,uint256,uint256,uint256),uint256,uint256,uint256,uint256,uint24,uint24,uint24,uint24,address,int24,uint256[],uint256[])",
+    "abiVersion": 4,
+    "deploymentBlocks": [
+      25524981,
+      48585753,
+      8800150,
+      40365706,
+      486842281
+    ]
+  },
+  {
+    "factory": "0xA32761549A1DE40060c194C86A8df24f0A29bA2d",
+    "chainIds": [1, 8453, 42161, 43114, 56, 137, 4326, 4663, 999, 143],
+    "eventSignature": "PoolCreated(address,address,address,uint256,address,address,address,address[],(uint256,uint256,uint256,uint256,uint256,uint256),uint256,uint256,uint256,uint256,uint24,uint24,uint24,uint24,address,int24,uint256[],uint256[])",
+    "abiVersion": 4,
+    "deploymentBlocks": [
+      25847896,
+      50530239,
+      498981629,
+      93821251,
+      118419979,
+      92763396,
+      25053079,
+      47603600, // NOTE: not a verified exact creation block. Blockscout's Robinhood-chain explorer reports this address as an EOA (is_contract: false, no creation tx) -- almost certainly an indexer bug on their end, since we have real decoded PoolCreated events (with real tx hashes) from this exact address on this exact chain, proving it is a contract. This value is a safe conservative lower bound, not a confirmed creation block.
+      44320518,
+      99667733
+    ]
+  }
+]

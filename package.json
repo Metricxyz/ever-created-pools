@@ -1,0 +1,26 @@
+{
+  "name": "ever-created-pools",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Strict pipeline: scans every Metric PoolFactory for PoolCreated logs, fetches pool balances and token metadata/prices, and filters down to significant pools. See README.md's Pipeline overview.",
+  "engines": {
+    "node": ">=22.6.0"
+  },
+  "scripts": {
+    "1-prepare-factories": "node scripts/1-prepare-factories.ts",
+    "2-pools-with-balances": "node scripts/2-pools-with-balances.ts",
+    "3-get-token-prices": "node scripts/3-get-token-prices.ts",
+    "3a-fill-remaining-prices": "node scripts/3a-fill-remaining-prices.ts",
+    "4-get-significant-pools": "node scripts/4-get-significant-pools.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "strip-json-comments": "^5.0.3",
+    "viem": "^2.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.8.0"
+  }
+}
