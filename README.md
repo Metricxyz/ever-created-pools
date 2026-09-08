@@ -78,13 +78,15 @@ pool, chain, factory, salt, bin, shares. A panel on the right lets you ignore fa
 latest deployment, `0xA32761549A1DE40060c194C86A8df24f0A29bA2d`, ignored by default) and
 recomputes totals/sorting live, client-side.
 
-To publish/refresh it on GitHub Pages: copy the latest data next to the page and commit both —
+The page fetches `../outputs/liquidity-holders.json` directly (relative to `docs/`), so — unlike
+every other pipeline output — `outputs/liquidity-holders.json` specifically is NOT gitignored (see
+`.gitignore`'s `outputs/*` + negation); `pools-with-balances.json` and `significant-pools.json`
+stay ignored as ephemeral/regenerable. To publish/refresh: run step 5 and commit the result —
 
 ```bash
 npm run 5-get-liquidity-holders
-cp outputs/liquidity-holders.json docs/liquidity-holders.json
-git add docs/liquidity-holders.json && git commit -m "Refresh liquidity holders data"
+git add outputs/liquidity-holders.json && git commit -m "Refresh liquidity holders data"
 ```
 
-then enable Pages once under Settings → Pages → Source: "Deploy from a branch", branch `main`,
-folder `/docs`.
+Enable Pages once under Settings → Pages → Source: "Deploy from a branch", branch `main`,
+folder `/ (root)` — root, not `/docs`, so the page can reach `outputs/` alongside it.
