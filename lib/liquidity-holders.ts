@@ -18,7 +18,7 @@
 // computeLiquidityHolders() is a pure getter — no I/O at all, just data in, data out. Read the
 // inputs with lib/liquidity-events.ts's scanLiquidityEventsPhase(), lib/bin-state-reader.ts's
 // fetchBinStatesPhase(), and lib/tokens-file.ts's readTokensFile(); persist the output with this
-// module's own writeLiquidityHoldersFile() (in lib/liquidity-holders-file.ts).
+// module's own writeLiquidityHoldersFile() below.
 import { mkdir, writeFile } from "node:fs/promises";
 import type { Address } from "viem";
 import { tokenValueUsd } from "./significant-pools.ts";

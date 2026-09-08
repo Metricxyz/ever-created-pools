@@ -67,10 +67,7 @@ export interface SignificantFactory {
   chains: SignificantChain[];
 }
 
-// Step 5's handoff: net LiquidityAdded/Removed (v2-4) or LiquidityModified (v1) share balance for
-// one account in one bin of one pool, after replaying that pool's full event history and summing
-// across every position salt. Only ever emitted for a strictly positive net (a zero-or-negative
-// result means the account no longer holds shares there).
+// Step 5's handoff — net shares only ever strictly positive; see lib/liquidity-events.ts.
 export interface AccountBinShares {
   factory: Address;
   chainId: number;
@@ -80,8 +77,7 @@ export interface AccountBinShares {
   shares: string;
 }
 
-// Step 5's other input: the pool's CURRENT on-chain reserves + total outstanding shares for one
-// bin (live state, not derived from event replay) — see lib/bin-state-reader.ts.
+// Live on-chain state, not derived from event replay — see lib/bin-state-reader.ts.
 export interface BinState {
   factory: Address;
   chainId: number;

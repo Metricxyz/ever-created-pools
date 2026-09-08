@@ -21,16 +21,10 @@ export const ERC20_METADATA_ABI = [
   { type: "function", name: "decimals", stateMutability: "view", inputs: [], outputs: [{ type: "uint8" }] },
 ] as const;
 
-// MetricOmmPoolDataProvider — a lens contract that reads any MetricOmmPool's bin state via
-// extsload, decoded against the CURRENT PoolStateLibrary storage layout (base slots 4/5/6 for
-// _binsStates/_binsTotalShares/_positionBinShares — see metric-core's PoolStateLibrary.sol).
-// That layout has been stable since it was introduced (predates every v2/v3/v4 factory in
-// factories.jsonc) through current HEAD, so this single deployed instance correctly reads any
-// v2/v3/v4 pool regardless of which factory created it. It does NOT correctly read v1 pools —
-// those predate this layout and use base slots 2/3 instead (see OLD_ERA_BIN_SLOTS below).
-// Deterministically deployed via CREATE2 at this exact address on all 10 chains this repo
-// supports; verified live (non-empty eth_getCode, identical bytecode length) on all of them
-// before relying on it, same bar as MULTICALL3_ADDRESS above.
+// MetricOmmPoolDataProvider — reads any MetricOmmPool's bin state via extsload, decoded against
+// the storage layout v2/v3/v4 pools use (NOT v1 — see OLD_ERA_BIN_SLOTS below). Deterministically
+// deployed via CREATE2 at this address on all 10 chains here; verified live (non-empty
+// eth_getCode, identical bytecode length) on all of them, same bar as MULTICALL3_ADDRESS above.
 export const DATA_PROVIDER_ADDRESS: Address = "0x95ab07bcef6463712213d0845962ff4293e5acf7";
 
 export const DATA_PROVIDER_ABI = [
@@ -62,17 +56,9 @@ export const DATA_PROVIDER_ABI = [
   },
 ] as const;
 
-// v1 pools (the only version older than the DataProvider-compatible storage layout) still
-// expose bare `extsload` directly (present since the very first deployed version), so their bin
-// state has to be read by replicating the pool's OWN slot math instead of using DataProvider.
-// Sourced verbatim from metric-core's genesis-commit PoolStateLibrary.sol (the library that has
-// always backed every StateView/DataProvider contract) — BINS_STATES_SLOT/BINS_TOTAL_SHARES_SLOT
-// were 2/3 at genesis and never moved for as long as the old (pre-DataProvider) layout was live;
-// only the newer layout renumbered them to 4/5. The BinState bit-packing itself (token0Balance
-// uint104 @ bit 0, token1Balance uint104 @ bit 104, lengthE6 uint16 @ bit 208, addFeeBuyE6 uint16
-// @ bit 224, addFeeSellE6 uint16 @ bit 240) is identical between the old and new layouts, so the
-// same decode logic in lib/bin-state-reader.ts serves both eras — only these base slot numbers
-// differ, and only for the old (v1) layout.
+// v1 pools predate DataProvider's storage layout, so their bins are read via the pool's own
+// `extsload` directly instead — same BinState bit-packing, just these different base slot
+// numbers (sourced from metric-core's genesis PoolStateLibrary.sol).
 export const OLD_ERA_BIN_SLOTS = {
   binsStates: 2n,
   binsTotalShares: 3n,
