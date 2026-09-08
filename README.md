@@ -71,17 +71,18 @@ explicitly. See each `lib/*.ts` file's header comment for what it owns.
 
 ## Liquidity holders webpage
 
-`docs/index.html` is a self-contained static page (no build step) that browses
-`outputs/liquidity-holders.json`: accounts sorted by estimated USD value, expandable to their
-pools (also sorted by value), expandable to the exact position details needed to redeem — owner,
-pool, chain, factory, salt, bin, shares. A panel on the right lets you ignore factories (e.g. the
-latest deployment, `0xA32761549A1DE40060c194C86A8df24f0A29bA2d`, ignored by default) and
-recomputes totals/sorting live, client-side.
+`index.html` (repo root, so GitHub Pages can serve it straight from `main` with no subfolder) is a
+self-contained static page (no build step) that browses `outputs/liquidity-holders.json`: accounts
+sorted by estimated USD value, expandable to their pools (also sorted by value), expandable to the
+exact position details needed to redeem — owner, pool, chain, factory, salt, bin, shares. A panel
+on the right lets you ignore factories (e.g. the latest deployment,
+`0xA32761549A1DE40060c194C86A8df24f0A29bA2d`, ignored by default) and recomputes totals/sorting
+live, client-side.
 
-The page fetches `../outputs/liquidity-holders.json` directly (relative to `docs/`), so — unlike
-every other pipeline output — `outputs/liquidity-holders.json` specifically is NOT gitignored (see
-`.gitignore`'s `outputs/*` + negation); `pools-with-balances.json` and `significant-pools.json`
-stay ignored as ephemeral/regenerable. To publish/refresh: run step 5 and commit the result —
+The page fetches `outputs/liquidity-holders.json` directly, so — unlike every other pipeline
+output — that file specifically is NOT gitignored (see `.gitignore`'s `outputs/*` + negation);
+`pools-with-balances.json` and `significant-pools.json` stay ignored as ephemeral/regenerable. To
+publish/refresh: run step 5 and commit the result —
 
 ```bash
 npm run 5-get-liquidity-holders
@@ -89,4 +90,4 @@ git add outputs/liquidity-holders.json && git commit -m "Refresh liquidity holde
 ```
 
 Enable Pages once under Settings → Pages → Source: "Deploy from a branch", branch `main`,
-folder `/ (root)` — root, not `/docs`, so the page can reach `outputs/` alongside it.
+folder `/ (root)`.
