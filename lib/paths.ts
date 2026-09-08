@@ -12,6 +12,10 @@ export const FACTORIES_JSONC_PATH = path.join(ROOT, "factories.jsonc");
 export const TOKENS_JSONC_PATH = path.join(ROOT, "tokens.jsonc");
 export const POOLS_WITH_BALANCES_PATH = path.join(OUTPUTS_DIR, "pools-with-balances.json");
 export const SIGNIFICANT_POOLS_PATH = path.join(OUTPUTS_DIR, "significant-pools.json");
+export const LIQUIDITY_HOLDERS_PATH = path.join(OUTPUTS_DIR, "liquidity-holders.json");
 export function abiPath(abiVersion: number): string {
   return path.join(ROOT, "abis", String(abiVersion), "MetricOmmPoolFactory.json");
+}
+export function poolAbiPath(abiVersion: number): string {
+  return path.join(ROOT, "abis", String(abiVersion), "MetricOmmPool.json");
 }

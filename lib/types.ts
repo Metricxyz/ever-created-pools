@@ -60,8 +60,50 @@ export interface SignificantPool extends PoolBalance {
 export interface SignificantChain {
   chainId: number;
   pools: SignificantPool[];
+  other_pools: SignificantPool[];
 }
 export interface SignificantFactory {
   factory: Address;
   chains: SignificantChain[];
+}
+
+// Step 5's handoff — net shares only ever strictly positive; see lib/liquidity-events.ts.
+export interface AccountBinShares {
+  factory: Address;
+  chainId: number;
+  pool: Address;
+  account: Address;
+  salt: string;
+  bin: number;
+  shares: string;
+}
+
+// Live on-chain state, not derived from event replay — see lib/bin-state-reader.ts.
+export interface BinState {
+  factory: Address;
+  chainId: number;
+  pool: Address;
+  bin: number;
+  token0BalanceScaled: string;
+  token1BalanceScaled: string;
+  totalShares: string;
+}
+
+// One on-chain position (owner is implicit — the enclosing LiquidityHolder's account) — the
+// (salt, bin) pair needed to redeem it.
+export interface PositionDetail {
+  salt: string;
+  bin: number;
+  shares: string;
+}
+export interface PoolPosition {
+  factory: Address;
+  pool: Address;
+  chainId: number;
+  estimatedValueUsd: number | null;
+  positions: PositionDetail[];
+}
+export interface LiquidityHolder {
+  account: Address;
+  positions: PoolPosition[];
 }

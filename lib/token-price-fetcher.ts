@@ -10,7 +10,8 @@
 // Fallback: CoinGecko's /simple/token_price API, only for whatever DeFiLlama didn't resolve —
 // anonymous tier allows one contract per request and rate-limits hard (429 after ~2 rapid calls,
 // with a `retry-after` header), so this path is serialized and paced; only worth it because the
-// fallback set should be small after DeFiLlama's pass.
+// fallback set should be small after DeFiLlama's pass. Set COINGECKO_API_KEY (a free Demo key) to
+// raise that limit instead of hitting it — unset, requests go out unauthenticated as before.
 //
 // Anything neither source has is left as-is — step 3a (manual, see README) is for filling those in
 // by hand; this module does not guess, and never overwrites an existing priceUsd (manual or
@@ -53,6 +54,10 @@ const COINGECKO_PLATFORM: Record<number, string> = {
   4663: "robinhood",
 };
 
+// Optional CoinGecko Demo API key (https://www.coingecko.com/en/developers/dashboard) — raises
+// the anonymous tier's very tight rate limit to ~30 calls/min. Unset: requests go out
+// unauthenticated, same as before this existed.
+const COINGECKO_API_KEY = process.env.COINGECKO_API_KEY;
 const COINGECKO_DELAY_MS = Number(process.env.COINGECKO_DELAY_MS ?? "3000");
 const DEFAULT_RETRY_AFTER_S = 60;
 const MAX_RETRIES = 3;
@@ -98,8 +103,10 @@ async function fetchDefiLlamaBatch(
 async function fetchCoinGeckoPrice(platform: string, address: string): Promise<number | null> {
   const url = `https://api.coingecko.com/api/v3/simple/token_price/${platform}?contract_addresses=${address}&vs_currencies=usd`;
 
+  const headers = COINGECKO_API_KEY ? { "x-cg-demo-api-key": COINGECKO_API_KEY } : undefined;
+
   for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
-    const res = await fetch(url);
+    const res = await fetch(url, { headers });
 
     if (res.status === 429) {
       const retryAfterHeader = res.headers.get("retry-after");

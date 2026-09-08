@@ -16,9 +16,10 @@ cp .env.example .env         # fill in ALCHEMY_API_KEY
 npm run 2-pools-with-balances   # scan PoolCreated logs, fetch balances + token metadata
 npm run 3-get-token-prices      # add priceUsd estimates (DeFiLlama, then CoinGecko fallback)
 npm run 4-get-significant-pools # filter/sort down to outputs/significant-pools.json
+npm run 5-get-liquidity-holders # who still holds liquidity -> outputs/liquidity-holders.json
 ```
 
-Steps 2 and 3 can be scoped: `--chains 1,8453` and/or `--factory 0x...`.
+Steps 2, 3, and 5 can be scoped: `--chains 1,8453` and/or `--factory 0x...`.
 
 Before any of this can find anything, `factories.jsonc` (and `abis/<n>/` if a new ABI shape is
 introduced) must list the factory — see Design below. `npm run 1-prepare-factories` and
@@ -47,11 +48,46 @@ finds a fresh one.
 2. Fetch `token0`/`token1` balances via Multicall3 → `outputs/pools-with-balances.json`.
 3. Fetch `name`/`symbol`/`decimals` on-chain, then `priceUsd` (DeFiLlama primary, CoinGecko
    fallback) → `tokens.jsonc`.
-4. Compute `valueUsd` per pool and filter: drop pools with both balances zero, drop pools with a
-   known value under $10, keep everything else (unknown-value pools sorted last) →
+4. Compute `valueUsd` per pool (if only one token's price is known, estimate the pool's value as
+   2x that side) and split each chain into `pools` (>= $10 estimated value, sorted descending) and
+   `other_pools` (zero balances, below $10, or value couldn't be estimated) →
    `outputs/significant-pools.json`.
+5. Replay every pool's `LiquidityAdded`/`LiquidityRemoved` (abiVersion 2-4) or
+   `LiquidityModified` (abiVersion 1) events and net them per (account, salt, bin) — that triple
+   is exactly the on-chain position key, so it's also exactly what's needed to redeem a specific
+   position later. This is the only way to learn who holds shares, since no version exposes an
+   on-chain holder list. Combine with each bin's CURRENT on-chain reserves/total-shares (via the
+   deployed `MetricOmmPoolDataProvider` for abiVersion 2-4, or hand-rolled `extsload` reads for
+   abiVersion 1, which predates that contract's storage layout — see `lib/abis.ts`'s
+   `OLD_ERA_BIN_SLOTS`) to estimate each holder's USD value per pool →
+   `outputs/liquidity-holders.json`. This intentionally excludes any protocol/performance fees
+   accrued in the pool's raw token balance — those aren't attributable to any bin, so they don't
+   belong to any liquidity holder.
 
 **Code organization:** `scripts/<step>.ts` are thin CLI entry points — parse args, call `lib/`,
 print results. Every `lib/` function either **gets** (computes/fetches, returns data, no disk I/O)
 or **writes** (persists already-computed data) — never both; scripts call get-then-write
 explicitly. See each `lib/*.ts` file's header comment for what it owns.
+
+## Liquidity holders webpage
+
+`index.html` (repo root, so GitHub Pages can serve it straight from `main` with no subfolder) is a
+self-contained static page (no build step) that browses `outputs/liquidity-holders.json`: accounts
+sorted by estimated USD value, expandable to their pools (also sorted by value), expandable to the
+exact position details needed to redeem — owner, pool, chain, factory, salt, bin, shares. A panel
+on the right lets you ignore factories (e.g. the latest deployment,
+`0xA32761549A1DE40060c194C86A8df24f0A29bA2d`, ignored by default) and recomputes totals/sorting
+live, client-side.
+
+The page fetches `outputs/liquidity-holders.json` directly, so — unlike every other pipeline
+output — that file specifically is NOT gitignored (see `.gitignore`'s `outputs/*` + negation);
+`pools-with-balances.json` and `significant-pools.json` stay ignored as ephemeral/regenerable. To
+publish/refresh: run step 5 and commit the result —
+
+```bash
+npm run 5-get-liquidity-holders
+git add outputs/liquidity-holders.json && git commit -m "Refresh liquidity holders data"
+```
+
+Enable Pages once under Settings → Pages → Source: "Deploy from a branch", branch `main`,
+folder `/ (root)`.

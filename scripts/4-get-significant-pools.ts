@@ -17,10 +17,10 @@ async function main(): Promise<void> {
   await writeSignificantPools(result);
 
   console.log(`Read ${stats.totalIn} pool(s) from outputs/pools-with-balances.json.`);
-  console.log(`  dropped (both balances zero): ${stats.droppedZeroBalance}`);
-  console.log(`  dropped (value known and < $10): ${stats.droppedBelowThreshold}`);
-  console.log(`  kept with known value: ${stats.keptKnown}`);
-  console.log(`  kept with unknown value (placed last per group): ${stats.keptUnknown}`);
+  console.log(`  significant (>= $10 estimated value): ${stats.keptKnown}`);
+  console.log(`  other — both balances zero: ${stats.zeroBalance}`);
+  console.log(`  other — value known and < $10: ${stats.belowThreshold}`);
+  console.log(`  other — value could not be estimated: ${stats.otherUnknown}`);
 }
 
 main().catch((err) => {
