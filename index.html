@@ -342,12 +342,6 @@ function render() {
     container.append(empty);
     return;
   }
-  // Auto-expand the top account, and its top pool in turn, so the full account -> pools ->
-  // positions hierarchy is visible immediately — a first-time visitor sees all three levels
-  // without needing to guess that rows are expandable.
-  rows[0].el.classList.add("open");
-  rows[0].el.querySelector(".pool-row")?.classList.add("open");
-
   for (const r of rows) container.append(r.el);
 }
 
