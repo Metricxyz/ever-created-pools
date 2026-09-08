@@ -53,14 +53,16 @@ finds a fresh one.
    `other_pools` (zero balances, below $10, or value couldn't be estimated) →
    `outputs/significant-pools.json`.
 5. Replay every pool's `LiquidityAdded`/`LiquidityRemoved` (abiVersion 2-4) or
-   `LiquidityModified` (abiVersion 1) events and net them per (account, bin) — the only way to
-   learn who holds shares, since no version exposes an on-chain holder list. Combine with each
-   bin's CURRENT on-chain reserves/total-shares (via the deployed `MetricOmmPoolDataProvider` for
-   abiVersion 2-4, or hand-rolled `extsload` reads for abiVersion 1, which predates that
-   contract's storage layout — see `lib/abis.ts`'s `OLD_ERA_BIN_SLOTS`) to estimate each holder's
-   USD value per pool → `outputs/liquidity-holders.json`. This intentionally excludes any
-   protocol/performance fees accrued in the pool's raw token balance — those aren't attributable
-   to any bin, so they don't belong to any liquidity holder.
+   `LiquidityModified` (abiVersion 1) events and net them per (account, salt, bin) — that triple
+   is exactly the on-chain position key, so it's also exactly what's needed to redeem a specific
+   position later. This is the only way to learn who holds shares, since no version exposes an
+   on-chain holder list. Combine with each bin's CURRENT on-chain reserves/total-shares (via the
+   deployed `MetricOmmPoolDataProvider` for abiVersion 2-4, or hand-rolled `extsload` reads for
+   abiVersion 1, which predates that contract's storage layout — see `lib/abis.ts`'s
+   `OLD_ERA_BIN_SLOTS`) to estimate each holder's USD value per pool →
+   `outputs/liquidity-holders.json`. This intentionally excludes any protocol/performance fees
+   accrued in the pool's raw token balance — those aren't attributable to any bin, so they don't
+   belong to any liquidity holder.
 
 **Code organization:** `scripts/<step>.ts` are thin CLI entry points — parse args, call `lib/`,
 print results. Every `lib/` function either **gets** (computes/fetches, returns data, no disk I/O)

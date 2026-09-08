@@ -1,7 +1,8 @@
-// Step 5: combines lib/liquidity-events.ts's per-(account, bin) share balances with
+// Step 5: combines lib/liquidity-events.ts's per-(account, salt, bin) share balances with
 // lib/bin-state-reader.ts's live on-chain bin reserves/totals and tokens.jsonc's prices into
 // outputs/liquidity-holders.json — one entry per account still holding shares anywhere, with
-// their position (bin-by-bin share counts + an estimated USD value) in every pool they're in.
+// their positions (salt + bin + share count, everything needed to redeem, plus an estimated USD
+// value) in every pool they're in.
 //
 // A bin's value is estimated the same way significant-pools.ts estimates a pool's (decimals +
 // priceUsd from tokens.jsonc — an ESTIMATE, not meant to be precise), from its CURRENT on-chain
@@ -25,17 +26,23 @@ import { tokenValueUsd } from "./significant-pools.ts";
 import { LIQUIDITY_HOLDERS_PATH, OUTPUTS_DIR } from "./paths.ts";
 import type {
   AccountBinShares,
-  BinPosition,
   BinState,
   ChainTokens,
   FactoryBalances,
   LiquidityHolder,
   PoolPosition,
+  PositionDetail,
   TokenMetadata,
 } from "./types.ts";
 
 function scaleMultiplier(internalDecimals: number, decimals: number): bigint {
   return 10n ** BigInt(internalDecimals - decimals);
+}
+
+// Compares non-negative decimal-integer strings (uint80 salts) numerically without a BigInt
+// round-trip: longer string is always larger, equal length falls back to lexical order.
+function compareDecimalStrings(a: string, b: string): number {
+  return a.length - b.length || a.localeCompare(b);
 }
 
 // realAmount = scaledAmount / 10^(internalDecimals - decimals); dividing this way (rather than
@@ -46,7 +53,7 @@ function descaledBalance(scaled: bigint, internalDecimals: number, decimals: num
 }
 
 export interface LiquidityHoldersResult {
-  totalAccountBinPositions: number;
+  totalPositions: number;
   distinctAccounts: number;
   distinctPoolPositions: number;
   binsWithUnknownValue: number;
@@ -121,10 +128,10 @@ export function computeLiquidityHolders(
     }
     let position = poolsForAccount.get(poolKey);
     if (!position) {
-      position = { pool: s.pool, chainId: s.chainId, estimatedValueUsd: null, binPositions: [] };
+      position = { factory: s.factory, pool: s.pool, chainId: s.chainId, estimatedValueUsd: null, positions: [] };
       poolsForAccount.set(poolKey, position);
     }
-    position.binPositions.push({ bin: s.bin, shares: s.shares });
+    position.positions.push({ salt: s.salt, bin: s.bin, shares: s.shares });
 
     const bs = binStateByKey.get(`${s.chainId}:${s.pool.toLowerCase()}:${s.bin}`);
     const totalValue = binValueUsd(s.chainId, s.pool, s.bin);
@@ -139,7 +146,9 @@ export function computeLiquidityHolders(
       const positions = [...poolsForAccount.values()].sort(
         (a, b) => a.chainId - b.chainId || a.pool.localeCompare(b.pool),
       );
-      for (const p of positions) p.binPositions.sort((a: BinPosition, b: BinPosition) => a.bin - b.bin);
+      for (const p of positions) {
+        p.positions.sort((a: PositionDetail, b: PositionDetail) => a.bin - b.bin || compareDecimalStrings(a.salt, b.salt));
+      }
       return { account: accountKey as Address, positions };
     })
     .sort((a, b) => a.account.localeCompare(b.account));
@@ -149,7 +158,7 @@ export function computeLiquidityHolders(
   return {
     result,
     stats: {
-      totalAccountBinPositions: accountBinShares.length,
+      totalPositions: accountBinShares.length,
       distinctAccounts: result.length,
       distinctPoolPositions,
       binsWithUnknownValue,

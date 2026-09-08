@@ -47,7 +47,7 @@ async function main(): Promise<void> {
   await writeLiquidityHoldersFile(result);
 
   console.log(`\n${stats.distinctAccounts} account(s) hold liquidity across ${stats.distinctPoolPositions} pool position(s).`);
-  console.log(`  total (account, bin) share position(s): ${stats.totalAccountBinPositions}`);
+  console.log(`  total position(s): ${stats.totalPositions}`);
   console.log(`  bin(s) with unknown/unpriceable value: ${stats.binsWithUnknownValue}`);
 }
 

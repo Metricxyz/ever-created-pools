@@ -73,6 +73,7 @@ export interface AccountBinShares {
   chainId: number;
   pool: Address;
   account: Address;
+  salt: string;
   bin: number;
   shares: string;
 }
@@ -88,15 +89,19 @@ export interface BinState {
   totalShares: string;
 }
 
-export interface BinPosition {
+// One on-chain position (owner is implicit — the enclosing LiquidityHolder's account) — the
+// (salt, bin) pair needed to redeem it.
+export interface PositionDetail {
+  salt: string;
   bin: number;
   shares: string;
 }
 export interface PoolPosition {
+  factory: Address;
   pool: Address;
   chainId: number;
   estimatedValueUsd: number | null;
-  binPositions: BinPosition[];
+  positions: PositionDetail[];
 }
 export interface LiquidityHolder {
   account: Address;

@@ -1,9 +1,9 @@
 // Step 5, phase (a): replays every pool's LiquidityAdded/LiquidityRemoved (abiVersion 2-4) or
-// LiquidityModified (abiVersion 1) events and nets them into a per-(pool, account, bin) share
-// balance — the only way to learn who holds shares at all, since no version exposes a way to
-// enumerate holders on-chain. Net across every position salt an account ever used in that bin;
-// callers only care about total shares held, not which salt they're parked under. Purely a
-// getter — does not write to disk.
+// LiquidityModified (abiVersion 1) events and nets them into a per-(pool, account, salt, bin)
+// share balance — the only way to learn who holds shares at all, since no version exposes a way
+// to enumerate holders on-chain. (account, salt, bin) is exactly the on-chain position key
+// (`_positionBinShares`'s mapping key), so this is also exactly what's needed to redeem a
+// specific position later. Purely a getter — does not write to disk.
 import { readFile } from "node:fs/promises";
 import type { AbiEvent, Address, PublicClient } from "viem";
 import { getLogsAdaptive } from "./adaptive-logs.ts";
@@ -63,11 +63,11 @@ export async function scanLiquidityEventsPhase(
     }
   }
 
-  // Aggregated across every position salt and every LiquidityAdded/Removed/Modified event —
-  // only the net per (pool, chain, account, bin) matters to callers.
+  // Net across every LiquidityAdded/Removed/Modified event touching the same (pool, chain,
+  // account, salt, bin) — that quintuple is one on-chain position, so this is its current balance.
   const netShares = new Map<string, bigint>();
-  function accumulate(chainId: number, pool: Address, account: Address, bin: number, delta: bigint): void {
-    const key = `${chainId}:${pool.toLowerCase()}:${account.toLowerCase()}:${bin}`;
+  function accumulate(chainId: number, pool: Address, account: Address, salt: bigint, bin: number, delta: bigint): void {
+    const key = `${chainId}:${pool.toLowerCase()}:${account.toLowerCase()}:${salt}:${bin}`;
     netShares.set(key, (netShares.get(key) ?? 0n) + delta);
   }
 
@@ -94,9 +94,14 @@ export async function scanLiquidityEventsPhase(
         toBlock,
       });
       for (const log of logs) {
-        const a = (log as { args?: Record<string, unknown> }).args as { provider: Address; bins: readonly number[]; deltaShares: readonly bigint[] };
+        const a = (log as { args?: Record<string, unknown> }).args as {
+          provider: Address;
+          salt: bigint;
+          bins: readonly number[];
+          deltaShares: readonly bigint[];
+        };
         for (let i = 0; i < a.bins.length; i++) {
-          accumulate(item.chainId, item.pool, a.provider, a.bins[i]!, a.deltaShares[i]!);
+          accumulate(item.chainId, item.pool, a.provider, a.salt, a.bins[i]!, a.deltaShares[i]!);
         }
       }
       if (incomplete.length) incompleteCount += incomplete.length;
@@ -106,15 +111,25 @@ export async function scanLiquidityEventsPhase(
         getLogsAdaptive(client, { address: item.pool, event: events.removed, fromBlock: item.fromBlock, toBlock }),
       ]);
       for (const log of addedResult.logs) {
-        const a = (log as { args?: Record<string, unknown> }).args as { provider: Address; binIdxs: readonly bigint[]; shares: readonly bigint[] };
+        const a = (log as { args?: Record<string, unknown> }).args as {
+          provider: Address;
+          salt: bigint;
+          binIdxs: readonly bigint[];
+          shares: readonly bigint[];
+        };
         for (let i = 0; i < a.binIdxs.length; i++) {
-          accumulate(item.chainId, item.pool, a.provider, Number(a.binIdxs[i]), a.shares[i]!);
+          accumulate(item.chainId, item.pool, a.provider, a.salt, Number(a.binIdxs[i]), a.shares[i]!);
         }
       }
       for (const log of removedResult.logs) {
-        const a = (log as { args?: Record<string, unknown> }).args as { provider: Address; binIdxs: readonly bigint[]; shares: readonly bigint[] };
+        const a = (log as { args?: Record<string, unknown> }).args as {
+          provider: Address;
+          salt: bigint;
+          binIdxs: readonly bigint[];
+          shares: readonly bigint[];
+        };
         for (let i = 0; i < a.binIdxs.length; i++) {
-          accumulate(item.chainId, item.pool, a.provider, Number(a.binIdxs[i]), -a.shares[i]!);
+          accumulate(item.chainId, item.pool, a.provider, a.salt, Number(a.binIdxs[i]), -a.shares[i]!);
         }
       }
       incompleteCount += addedResult.incomplete.length + removedResult.incomplete.length;
@@ -139,18 +154,19 @@ export async function scanLiquidityEventsPhase(
   const result: AccountBinShares[] = [];
   for (const [key, shares] of netShares) {
     if (shares <= 0n) continue; // no longer a holder
-    const [chainIdStr, pool, account, binStr] = key.split(":");
+    const [chainIdStr, pool, account, salt, binStr] = key.split(":");
     result.push({
       factory: factoryByPool.get(`${chainIdStr}:${pool}`)!,
       chainId: Number(chainIdStr),
       pool: pool as Address,
       account: account as Address,
+      salt: salt!,
       bin: Number(binStr),
       shares: shares.toString(),
     });
   }
 
-  console.log(`(a) Scanned ${scannedCount} pool(s), found ${result.length} active (account, bin) share position(s).`);
+  console.log(`(a) Scanned ${scannedCount} pool(s), found ${result.length} active position(s).`);
   if (skippedCount) console.log(`Skipped ${skippedCount} pool(s).`);
   if (incompleteCount) console.warn(`WARNING: ${incompleteCount} incomplete block range(s) across all pools.`);
 
