@@ -181,7 +181,12 @@
 
 <script>
 const DATA_URL = "outputs/liquidity-holders.json";
-const DEFAULT_IGNORED = new Set(["0xa32761549a1de40060c194c86a8df24f0a29ba2d"]);
+const FACTORY_ALIASES = {
+  "0xe22f9fc0f04486de25ed6cf1800a4a47afd82e0c": "V0",
+  "0x622911384e7973439b8be305f5e3fc3c5736ede4": "V1",
+  "0xa32761549a1de40060c194c86a8df24f0a29ba2d": "V2",
+};
+const DEFAULT_IGNORED = new Set(Object.keys(FACTORY_ALIASES));
 
 const CHAIN_NAMES = {
   1: "Ethereum", 8453: "Base", 42161: "Arbitrum", 43114: "Avalanche", 56: "BNB Chain",
@@ -192,6 +197,10 @@ const usd = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD",
 function formatUsd(v) { return v == null ? "?" : usd.format(v); }
 function shortAddr(a) { return a.slice(0, 6) + "…" + a.slice(-4); }
 function chainName(id) { return CHAIN_NAMES[id] ?? `chain ${id}`; }
+function factoryLabel(address) {
+  const alias = FACTORY_ALIASES[address.toLowerCase()];
+  return alias ? `${shortAddr(address)} (${alias})` : shortAddr(address);
+}
 
 function copyButton(text) {
   const btn = document.createElement("button");
@@ -207,14 +216,14 @@ function copyButton(text) {
   return btn;
 }
 
-function addrSpan(address) {
+function addrSpan(address, label) {
   const wrap = document.createElement("span");
   wrap.style.display = "inline-flex";
   wrap.style.alignItems = "center";
   wrap.style.gap = "4px";
   const code = document.createElement("span");
   code.className = "addr";
-  code.textContent = shortAddr(address);
+  code.textContent = label ?? shortAddr(address);
   code.title = address;
   wrap.append(code, copyButton(address));
   return wrap;
@@ -246,7 +255,7 @@ function buildPositionsTable(owner, pool) {
     const tdChain = document.createElement("td");
     tdChain.textContent = chainName(pool.chainId);
     const tdFactory = document.createElement("td");
-    tdFactory.append(addrSpan(pool.factory));
+    tdFactory.append(addrSpan(pool.factory, factoryLabel(pool.factory)));
     const tdSalt = document.createElement("td");
     tdSalt.className = "wrap";
     tdSalt.textContent = pos.salt;
@@ -274,7 +283,7 @@ function buildPoolRow(owner, pool) {
   const addr = addrSpan(pool.pool);
   const meta = document.createElement("span");
   meta.className = "pool-meta";
-  meta.textContent = `${chainName(pool.chainId)} · factory ${shortAddr(pool.factory)} · ${pool.positions.length} position(s) — click to expand`;
+  meta.textContent = `${chainName(pool.chainId)} · factory ${factoryLabel(pool.factory)} · ${pool.positions.length} position(s) — click to expand`;
   const value = document.createElement("span");
   value.className = "value" + (pool.estimatedValueUsd == null ? " dim" : "");
   value.textContent = formatUsd(pool.estimatedValueUsd);
@@ -365,7 +374,7 @@ function renderFactoryFilters() {
     });
     const label = document.createElement("label");
     label.htmlFor = checkbox.id;
-    label.textContent = shortAddr(factory);
+    label.textContent = factoryLabel(factory);
     label.title = factory;
     row.append(checkbox, label, copyButton(factory));
     container.append(row);
