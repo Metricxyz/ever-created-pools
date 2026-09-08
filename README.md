@@ -68,3 +68,23 @@ finds a fresh one.
 print results. Every `lib/` function either **gets** (computes/fetches, returns data, no disk I/O)
 or **writes** (persists already-computed data) — never both; scripts call get-then-write
 explicitly. See each `lib/*.ts` file's header comment for what it owns.
+
+## Liquidity holders webpage
+
+`docs/index.html` is a self-contained static page (no build step) that browses
+`outputs/liquidity-holders.json`: accounts sorted by estimated USD value, expandable to their
+pools (also sorted by value), expandable to the exact position details needed to redeem — owner,
+pool, chain, factory, salt, bin, shares. A panel on the right lets you ignore factories (e.g. the
+latest deployment, `0xA32761549A1DE40060c194C86A8df24f0A29bA2d`, ignored by default) and
+recomputes totals/sorting live, client-side.
+
+To publish/refresh it on GitHub Pages: copy the latest data next to the page and commit both —
+
+```bash
+npm run 5-get-liquidity-holders
+cp outputs/liquidity-holders.json docs/liquidity-holders.json
+git add docs/liquidity-holders.json && git commit -m "Refresh liquidity holders data"
+```
+
+then enable Pages once under Settings → Pages → Source: "Deploy from a branch", branch `main`,
+folder `/docs`.
