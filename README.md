@@ -47,8 +47,9 @@ finds a fresh one.
 2. Fetch `token0`/`token1` balances via Multicall3 → `outputs/pools-with-balances.json`.
 3. Fetch `name`/`symbol`/`decimals` on-chain, then `priceUsd` (DeFiLlama primary, CoinGecko
    fallback) → `tokens.jsonc`.
-4. Compute `valueUsd` per pool and filter: drop pools with both balances zero, drop pools with a
-   known value under $10, keep everything else (unknown-value pools sorted last) →
+4. Compute `valueUsd` per pool (if only one token's price is known, estimate the pool's value as
+   2x that side) and split each chain into `pools` (>= $10 estimated value, sorted descending) and
+   `other_pools` (zero balances, below $10, or value couldn't be estimated) →
    `outputs/significant-pools.json`.
 
 **Code organization:** `scripts/<step>.ts` are thin CLI entry points — parse args, call `lib/`,

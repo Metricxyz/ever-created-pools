@@ -60,6 +60,7 @@ export interface SignificantPool extends PoolBalance {
 export interface SignificantChain {
   chainId: number;
   pools: SignificantPool[];
+  other_pools: SignificantPool[];
 }
 export interface SignificantFactory {
   factory: Address;
