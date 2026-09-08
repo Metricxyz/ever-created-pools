@@ -16,9 +16,10 @@ cp .env.example .env         # fill in ALCHEMY_API_KEY
 npm run 2-pools-with-balances   # scan PoolCreated logs, fetch balances + token metadata
 npm run 3-get-token-prices      # add priceUsd estimates (DeFiLlama, then CoinGecko fallback)
 npm run 4-get-significant-pools # filter/sort down to outputs/significant-pools.json
+npm run 5-get-liquidity-holders # who still holds liquidity -> outputs/liquidity-holders.json
 ```
 
-Steps 2 and 3 can be scoped: `--chains 1,8453` and/or `--factory 0x...`.
+Steps 2, 3, and 5 can be scoped: `--chains 1,8453` and/or `--factory 0x...`.
 
 Before any of this can find anything, `factories.jsonc` (and `abis/<n>/` if a new ABI shape is
 introduced) must list the factory — see Design below. `npm run 1-prepare-factories` and
@@ -51,6 +52,15 @@ finds a fresh one.
    2x that side) and split each chain into `pools` (>= $10 estimated value, sorted descending) and
    `other_pools` (zero balances, below $10, or value couldn't be estimated) →
    `outputs/significant-pools.json`.
+5. Replay every pool's `LiquidityAdded`/`LiquidityRemoved` (abiVersion 2-4) or
+   `LiquidityModified` (abiVersion 1) events and net them per (account, bin) — the only way to
+   learn who holds shares, since no version exposes an on-chain holder list. Combine with each
+   bin's CURRENT on-chain reserves/total-shares (via the deployed `MetricOmmPoolDataProvider` for
+   abiVersion 2-4, or hand-rolled `extsload` reads for abiVersion 1, which predates that
+   contract's storage layout — see `lib/abis.ts`'s `OLD_ERA_BIN_SLOTS`) to estimate each holder's
+   USD value per pool → `outputs/liquidity-holders.json`. This intentionally excludes any
+   protocol/performance fees accrued in the pool's raw token balance — those aren't attributable
+   to any bin, so they don't belong to any liquidity holder.
 
 **Code organization:** `scripts/<step>.ts` are thin CLI entry points — parse args, call `lib/`,
 print results. Every `lib/` function either **gets** (computes/fetches, returns data, no disk I/O)

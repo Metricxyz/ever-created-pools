@@ -29,7 +29,7 @@ import type { ChainTokens, FactoryBalances, SignificantFactory, SignificantPool,
 const MIN_VALUE_USD = 10;
 const SINGLE_TOKEN_ESTIMATE_MULTIPLIER = 2;
 
-function tokenValueUsd(balance: string, decimals: number | null, priceUsd: number | null | undefined): number | null {
+export function tokenValueUsd(balance: string, decimals: number | null, priceUsd: number | null | undefined): number | null {
   if (balance === "ERROR" || decimals == null || priceUsd == null) return null;
   const raw = Number(balance);
   if (!Number.isFinite(raw)) return null;

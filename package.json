@@ -13,6 +13,7 @@
     "3-get-token-prices": "node scripts/3-get-token-prices.ts",
     "3a-fill-remaining-prices": "node scripts/3a-fill-remaining-prices.ts",
     "4-get-significant-pools": "node scripts/4-get-significant-pools.ts",
+    "5-get-liquidity-holders": "node scripts/5-get-liquidity-holders.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
