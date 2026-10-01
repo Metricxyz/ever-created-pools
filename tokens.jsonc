@@ -13,119 +13,119 @@
         "name": "Wrapped BTC",
         "symbol": "WBTC",
         "decimals": 8,
-        "priceUsd": 78143.11129903003
+        "priceUsd": 83748.19432946139
       },
       {
         "address": "0x45804880De22913dAFE09f4980848ECE6EcbAf78",
         "name": "Paxos Gold",
         "symbol": "PAXG",
         "decimals": 18,
-        "priceUsd": 4394.4069900839
+        "priceUsd": 4171.0226717397245
       },
       {
         "address": "0x4c9EDD5852cd905f086C759E8383e09bff1E68B3",
         "name": "USDe",
         "symbol": "USDe",
         "decimals": 18,
-        "priceUsd": 0.9996854073997419
+        "priceUsd": 0.9998588284687728
       },
       {
         "address": "0x68749665FF8D2d112Fa859AA293F07A622782F38",
         "name": "Tether Gold",
         "symbol": "XAUt",
         "decimals": 6,
-        "priceUsd": 4391.490636742453
+        "priceUsd": 4162.817651729325
       },
       {
         "address": "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
         "name": "PayPal USD",
         "symbol": "PYUSD",
         "decimals": 6,
-        "priceUsd": 0.9997768790878667
+        "priceUsd": 0.9999889297723076
       },
       {
         "address": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
         "name": "Wrapped liquid staked Ether 2.0",
         "symbol": "wstETH",
         "decimals": 18,
-        "priceUsd": 3074.6246876591845
+        "priceUsd": 3340.9623346969056
       },
       {
         "address": "0x8292Bb45bf1Ee4d140127049757C2E0fF06317eD",
         "name": "RLUSD",
         "symbol": "RLUSD",
         "decimals": 18,
-        "priceUsd": 0.9999156121697208
+        "priceUsd": 1.0001303710194924
       },
       {
         "address": "0x829f4B62EEBE12Af653b4dD4fFc480966F7d7f09",
         "name": "sato",
         "symbol": "sato",
         "decimals": 18,
-        "priceUsd": 0.17488388158489718
+        "priceUsd": 0.1807145755398289
       },
       {
         "address": "0x9D39A5DE30e57443BfF2A8307A4256c8797A3497",
         "name": "Staked USDe",
         "symbol": "sUSDe",
         "decimals": 18,
-        "priceUsd": 1.2466605013583205
+        "priceUsd": 1.2506838634457906
       },
       {
         "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
         "name": "USD Coin",
         "symbol": "USDC",
         "decimals": 6,
-        "priceUsd": 0.9998084399858657
+        "priceUsd": 0.9999188377040754
       },
       {
         "address": "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
         "name": "rsETH",
         "symbol": "rsETH",
         "decimals": 18,
-        "priceUsd": 2661.9458892887283
+        "priceUsd": 2901.2497147385184
       },
       {
         "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         "name": "Wrapped Ether",
         "symbol": "WETH",
         "decimals": 18,
-        "priceUsd": 2472.311936040751
+        "priceUsd": 2691.859341729354
       },
       {
         "address": "0xE172e9B6cfBeeB5593bDcE3f077356FDb33af904",
         "name": "Interfold",
         "symbol": "FOLD",
         "decimals": 18,
-        "priceUsd": 0.05420560096582223
+        "priceUsd": 0.06607179253505402
       },
       {
         "address": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
         "name": "Liquid staked Ether 2.0",
         "symbol": "stETH",
         "decimals": 18,
-        "priceUsd": 2471.0355604164283
+        "priceUsd": 2682.6265174835517
       },
       {
         "address": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
         "name": "Coinbase Wrapped BTC",
         "symbol": "cbBTC",
         "decimals": 8,
-        "priceUsd": 78263.57143458298
+        "priceUsd": 83835.78085094811
       },
       {
         "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
         "name": "Tether USD",
         "symbol": "USDT",
         "decimals": 6,
-        "priceUsd": 0.9995813515454678
+        "priceUsd": 0.999760774911319
       },
       {
         "address": "0xf280B16EF293D8e534e370794ef26bF312694126",
         "name": "Asteroid Shiba",
         "symbol": "ASTEROID",
         "decimals": 9,
-        "priceUsd": 0.000020310288819587997
+        "priceUsd": 0.000013304376218309014
       }
     ]
   },
@@ -137,231 +137,270 @@
         "name": "NVIDIA Corp",
         "symbol": "NVDAB",
         "decimals": 18,
-        "priceUsd": 231.18526509055764
+        "priceUsd": 229.5737704267813
+      },
+      {
+        "address": "0x13920fe6467E9e3c852B8D365A036c995F0F7777",
+        "name": "GREEN MORNING",
+        "symbol": "GM",
+        "decimals": 18
       },
       {
         "address": "0x1501EC83FFEf405B4331CC4f73277a40fb0C627d",
         "name": "Marvell Technology (Ondo Tokenized)",
         "symbol": "MRVLon",
         "decimals": 18,
-        "priceUsd": 224.83311881733147
+        "priceUsd": 260.61947384685607
       },
       {
         "address": "0x1FFAD32d69c5FEAd99f88C25ca0191Edc3757636",
         "name": "South Korea Bull 3X ETF",
         "symbol": "KORUB",
         "decimals": 18,
-        "priceUsd": 23.706380623862213
+        "priceUsd": 20.539477781612067
       },
       {
         "address": "0x205812CdBed920aFf76C6580abD681a46D11efc7",
         "name": "Invesqo QQQ",
         "symbol": "QQQB",
         "decimals": 18,
-        "priceUsd": 719.1441638596796
+        "priceUsd": 743.2656978735027
       },
       {
         "address": "0x2170Ed0880ac9A755fd29B2688956BD959F933F8",
         "name": "Ethereum Token",
         "symbol": "ETH",
         "decimals": 18,
-        "priceUsd": 2472.5461998378396
+        "priceUsd": 2684.2010257692127
       },
       {
         "address": "0x3F53De71c126BdaBAe20f9cD64848d317f6C3238",
         "name": "Alphabet",
         "symbol": "GOOGLB",
         "decimals": 18,
-        "priceUsd": 336.139509914272
+        "priceUsd": 349.4712094178672
       },
       {
         "address": "0x3eE4dF61bd4F867E349BEaE8bFE07bc31b4850fb",
         "name": "Sandisk Corporation",
         "symbol": "SNDKB",
         "decimals": 18,
-        "priceUsd": 1742.398628447344
+        "priceUsd": 1747.969284754019
       },
       {
         "address": "0x431a3BEE82E2ca41e49895CbECE5bB0F76A89b7A",
         "name": "Apple",
         "symbol": "AAPLB",
         "decimals": 18,
-        "priceUsd": 318.46929114676624
+        "priceUsd": 331.27939991825235
       },
       {
         "address": "0x46cEeFDa28Dd7207059ed19B0acdc026955bb15C",
         "name": "GameStop",
         "symbol": "GMEB",
         "decimals": 18,
-        "priceUsd": 19.189610216641146
+        "priceUsd": 24.42777501248788
       },
       {
         "address": "0x4eF9d3062c7F6ebA4AAE4990c5036598C6eff4ec",
         "name": "Alibaba",
         "symbol": "BABAB",
         "decimals": 18,
-        "priceUsd": 111.90317963916168
+        "priceUsd": 107.80384975462503
       },
       {
         "address": "0x55d398326f99059fF775485246999027B3197955",
         "name": "Tether USD",
         "symbol": "USDT",
         "decimals": 18,
-        "priceUsd": 0.9995813515454678
+        "priceUsd": 0.9997607749113195
       },
       {
         "address": "0x5b1910eAaD6450E50f816082Aa078C41F10C292f",
         "name": "Tesla, Inc. ",
         "symbol": "TSLAB",
         "decimals": 18,
-        "priceUsd": 354.8276607412863
+        "priceUsd": 356.3556004080006
       },
       {
         "address": "0x7083609fCE4d1d8Dc0C979AAb8c869Ea2C873402",
         "name": "Polkadot Token",
         "symbol": "DOT",
         "decimals": 18,
-        "priceUsd": 1.076503860790375
+        "priceUsd": 1.1863275113424638
       },
       {
         "address": "0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c",
         "name": "BTCB Token",
         "symbol": "BTCB",
         "decimals": 18,
-        "priceUsd": 77969.7105214064
+        "priceUsd": 83494.29349256598
       },
       {
         "address": "0x7138b48df7D98D7e3cc221BfE7192D0a178182D8",
         "name": "SPY",
         "symbol": "SPYB",
         "decimals": 18,
-        "priceUsd": 766.2601836096766
+        "priceUsd": 765.572608260951
       },
       {
         "address": "0x7425889FE94F9d693E8daefE88BCCed6AcFEf4c0",
         "name": "Meta Platforms",
         "symbol": "METAB",
         "decimals": 18,
-        "priceUsd": 614.4284931024913
+        "priceUsd": 728.9853533873687
       },
       {
         "address": "0x80f3D493EBCe97e343c53D29a137942416B4ffC0",
         "name": "Circle Internet Group Inc.",
         "symbol": "CRCLB",
         "decimals": 18,
-        "priceUsd": 99.31587771720955
+        "priceUsd": 81.59217038627725
       },
       {
         "address": "0x8b6ACf6041A81567f012Ff6A4C6D96d5818d74bF",
         "name": "Micron Technology (Ondo Tokenized)",
         "symbol": "MUon",
         "decimals": 18,
-        "priceUsd": 1023.1592527008733
+        "priceUsd": 1065.8912787906731
       },
       {
         "address": "0x93862d63fd9Fd488B1328E9b47717d75e994a84B",
         "name": "Roundhill Memory ETF",
         "symbol": "DRAMB",
         "decimals": 18,
-        "priceUsd": 60.86859309598679
+        "priceUsd": 60.80376457897672
       },
       {
         "address": "0x992879Cd8ce0c312d98648875B5A8D6D042cbF34",
         "name": "Circle Internet Group (Ondo Tokenized)",
         "symbol": "CRCLon",
         "decimals": 18,
-        "priceUsd": 99.227143
+        "priceUsd": 82.305
+      },
+      {
+        "address": "0x99D1346bd8b2A3E727BEbef733FeE7557d2A7777",
+        "name": "牛马",
+        "symbol": "牛马",
+        "decimals": 18
       },
       {
         "address": "0x9e82e3da8f1115B73d24bB24113ab836FfDAb6b6",
         "name": "Tradr 2X Long SNDK ETF",
         "symbol": "SNXXB",
         "decimals": 18,
-        "priceUsd": 17.479730809986503
+        "priceUsd": 16.805182976890627
       },
       {
         "address": "0xA394dCEa3fd3847fD793afBFd163E2e3858B7c65",
         "name": "Robinhood",
         "symbol": "HOODB",
         "decimals": 18,
-        "priceUsd": 125.25142272296335
+        "priceUsd": 112.91365697662175
       },
       {
         "address": "0xA9eE28C80f960B889dFbd1902055218cBa016F75",
         "name": "NVIDIA (Ondo Tokenized)",
         "symbol": "NVDAon",
         "decimals": 18,
-        "priceUsd": 231.63903210039086
+        "priceUsd": 230.46963586673735
       },
       {
         "address": "0xBEEA1D618e533a387D941F58a7d4c9b7bD377777",
         "name": "牛来",
         "symbol": "牛来",
         "decimals": 18,
-        "priceUsd": 0.08454062832443032
+        "priceUsd": 0.09971306073931453
       },
       {
         "address": "0xCA750eF65f295BBECd685Abf54e82CAf297BDB61",
         "name": "SK Hynix",
         "symbol": "SKHYB",
         "decimals": 18,
-        "priceUsd": 180.1928070410486
+        "priceUsd": 185.73794359662378
       },
       {
         "address": "0xE28Cd11C99AF2df76bb8aDA4Cd0ef3904378280F",
         "name": "Direxion Semiconductor Bear 3X ETF",
         "symbol": "SOXSB",
         "decimals": 18,
-        "priceUsd": 44.37111500222462
+        "priceUsd": 32.8818222905093
       },
       {
         "address": "0xE87afb3076AeB0f9B14E368DE8145ae6a2826A14",
         "name": "Strategy Inc.",
         "symbol": "MSTRB",
         "decimals": 18,
-        "priceUsd": 138.24
+        "priceUsd": 154.11934833882842
       },
       {
         "address": "0xF2ec508422174Ee564de98187db9359D318AFB6b",
         "name": "Trump Media & Technology Group Corp",
         "symbol": "DJTB",
         "decimals": 18,
-        "priceUsd": 9.034166003787085
+        "priceUsd": 9.070401624890486
+      },
+      {
+        "address": "0xaBFfa443547b34ab6C3B3173d26e233900527777",
+        "name": "Truman World",
+        "symbol": "TRUMAN",
+        "decimals": 18
       },
       {
         "address": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
         "name": "Wrapped BNB",
         "symbol": "WBNB",
         "decimals": 18,
-        "priceUsd": 748.4602659488678
+        "priceUsd": 768.7018612787184
       },
       {
         "address": "0xbe9D156892E55e7154BcD3cB0FEA677F9D3103E1",
         "name": "SpaceX",
         "symbol": "SPCXB",
         "decimals": 18,
-        "priceUsd": 148.61661371364994
+        "priceUsd": 151.51518336119264
+      },
+      {
+        "address": "0xcAFdBCE93477261Db8250e42BdAe6E66733F9E20",
+        "name": "Gstock",
+        "symbol": "GSTOCK",
+        "decimals": 18,
+        "priceUsd": 0.017707926573797574
       },
       {
         "address": "0xcdf2f3e0fa43C47A6662a91C9E4a7C5f69762699",
         "name": "Micron Technology Inc",
         "symbol": "MUB",
         "decimals": 18,
-        "priceUsd": 1025.5600559410261
+        "priceUsd": 1063.9638081218945
+      },
+      {
+        "address": "0xd270D4e1EC6e6E0d28C0ecB8BE966EC75997FFfF",
+        "name": "4Stock",
+        "symbol": "4Stock",
+        "decimals": 18,
+        "priceUsd": 0.008583908422707908
       },
       {
         "address": "0xd97d097a89113fa59b76c572E5b2Eb647E8eefaf",
         "name": "Semicon Bull 3X ETF",
         "symbol": "SOXLB",
         "decimals": 18,
-        "priceUsd": 122.75524592316631
+        "priceUsd": 149.11622864785187
       },
       {
         "address": "0xf40592DaACb3e5abf358789F5688C0B4f64d7777",
         "name": "FLORK",
         "symbol": "FLORK",
         "decimals": 18,
-        "priceUsd": 0.013216392471589523
+        "priceUsd": 0.006568187060154592
+      },
+      {
+        "address": "0xfa6D9B504848606Eb9aeC04CCc161D169B3f2159",
+        "name": "BREW",
+        "symbol": "BREW",
+        "decimals": 18,
+        "priceUsd": 0.008207024231982355
       }
     ]
   },
@@ -373,28 +412,28 @@
         "name": "(PoS) Wrapped BTC",
         "symbol": "WBTC",
         "decimals": 8,
-        "priceUsd": 78170.17243587859
+        "priceUsd": 83547.76547445444
       },
       {
         "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
         "name": "USD Coin (PoS)",
         "symbol": "USDC",
         "decimals": 6,
-        "priceUsd": 0.9998371175530071
+        "priceUsd": 0.9998840074218979
       },
       {
         "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
         "name": "USD Coin",
         "symbol": "USDC",
         "decimals": 6,
-        "priceUsd": 0.9998084399858657
+        "priceUsd": 0.9999188377040754
       },
       {
         "address": "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619",
         "name": "Wrapped Ether",
         "symbol": "WETH",
         "decimals": 18,
-        "priceUsd": 2474.6316687836784
+        "priceUsd": 2685.769788809019
       }
     ]
   },
@@ -406,28 +445,28 @@
         "name": "Wrapped BTC",
         "symbol": "WBTC",
         "decimals": 8,
-        "priceUsd": 78143.11129903003
+        "priceUsd": 83748.19432946139
       },
       {
         "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
         "name": "Wrapped MON",
         "symbol": "WMON",
         "decimals": 18,
-        "priceUsd": 0.025264062719298902
+        "priceUsd": 0.03258613707838653
       },
       {
         "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
         "name": "USDC",
         "symbol": "USDC",
         "decimals": 6,
-        "priceUsd": 0.9998084399858657
+        "priceUsd": 0.9999188377040754
       },
       {
         "address": "0xEE8c0E9f1BFFb4Eb878d8f15f368A02a35481242",
         "name": "Wrapped Ether",
         "symbol": "WETH",
         "decimals": 18,
-        "priceUsd": 2472.5461998378396
+        "priceUsd": 2684.2010257692127
       }
     ]
   },
@@ -439,7 +478,7 @@
         "name": "Kinetiq Governance Token",
         "symbol": "KNTQ",
         "decimals": 18,
-        "priceUsd": 0.21429529917977239
+        "priceUsd": 0.29792520852277976
       },
       {
         "address": "0x0E894D40842441fb45cD6b8cA0Bc1561f3469076",
@@ -452,56 +491,56 @@
         "name": "Micron Technology (Ondo Tokenized)",
         "symbol": "MUon",
         "decimals": 18,
-        "priceUsd": 1026.5528668501386
+        "priceUsd": 1056.0133981440524
       },
       {
         "address": "0x13a81c5e8b4AB05Fc721DfF7bA95e250b29458F8",
         "name": "Circle Internet Group (Ondo Tokenized)",
         "symbol": "CRCLon",
         "decimals": 18,
-        "priceUsd": 99.51995039364256
+        "priceUsd": 81.90837522586689
       },
       {
         "address": "0x27eC642013bcB3D80CA3706599D3cdA04F6f4452",
         "name": "Unit Pump",
         "symbol": "UPUMP",
         "decimals": 6,
-        "priceUsd": 0.004284995873572006
+        "priceUsd": 0.005658561856922696
       },
       {
         "address": "0x5555555555555555555555555555555555555555",
         "name": "Wrapped HYPE",
         "symbol": "WHYPE",
         "decimals": 18,
-        "priceUsd": 82.78029169489456
+        "priceUsd": 89.25664039337913
       },
       {
         "address": "0x9FDBdA0A5e284c32744D2f17Ee5c74B284993463",
         "name": "Unit Bitcoin",
         "symbol": "UBTC",
         "decimals": 8,
-        "priceUsd": 78225.38810348937
+        "priceUsd": 83495.51476656902
       },
       {
         "address": "0x9b498C3c8A0b8CD8BA1D9851d40D186F1872b44E",
         "name": "Purr",
         "symbol": "PURR",
         "decimals": 18,
-        "priceUsd": 0.11134474590690699
+        "priceUsd": 0.16241788393643297
       },
       {
         "address": "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
         "name": "USD₮0",
         "symbol": "USD₮0",
         "decimals": 6,
-        "priceUsd": 0.9997655678380042
+        "priceUsd": 0.9996963268462953
       },
       {
         "address": "0xB989ad9b91886b1Aaed8DaADb26F028b29b40945",
         "name": "NVIDIA (Ondo Tokenized)",
         "symbol": "NVDAon",
         "decimals": 18,
-        "priceUsd": 231.49075503054084
+        "priceUsd": 230.10187424867127
       },
       {
         "address": "0xCC643a9b6cb14e7D5fF9Bd81ABcD5103ECeB0999",
@@ -515,14 +554,14 @@
         "name": "USDC",
         "symbol": "USDC",
         "decimals": 6,
-        "priceUsd": 0.9998084399858657
+        "priceUsd": 0.9999188377040754
       },
       {
         "address": "0xfD739d4e423301CE9385c1fb8850539D657C296D",
         "name": "Kinetiq Staked HYPE",
         "symbol": "kHYPE",
         "decimals": 18,
-        "priceUsd": 84.72946186237611
+        "priceUsd": 90.99818852430568
       }
     ]
   },
@@ -534,14 +573,14 @@
         "name": "MEGA",
         "symbol": "MEGA",
         "decimals": 18,
-        "priceUsd": 0.040772014333277255
+        "priceUsd": 0.047196829767795254
       },
       {
         "address": "0x4200000000000000000000000000000000000006",
         "name": "Wrapped Ether",
         "symbol": "WETH",
         "decimals": 18,
-        "priceUsd": 2474.6316687836784
+        "priceUsd": 2685.769788809019
       },
       {
         "address": "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
@@ -555,7 +594,7 @@
         "name": "MegaUSD",
         "symbol": "USDm",
         "decimals": 18,
-        "priceUsd": 0.9974549522437632
+        "priceUsd": 1.0007959066195933
       }
     ]
   },
@@ -567,7 +606,7 @@
         "name": "Cash Cat",
         "symbol": "CASHCAT",
         "decimals": 18,
-        "priceUsd": 0.17607870097539188
+        "priceUsd": 0.17003361928105593
       },
       {
         "address": "0x022c90ed10c2172Bb9B2D54838bbe5D0827c4AF1",
@@ -582,25 +621,70 @@
         "decimals": 18
       },
       {
+        "address": "0x050352064592F5c776d1f90Bf27618747c7c0deD",
+        "name": "Test Mascot",
+        "symbol": "T",
+        "decimals": 18
+      },
+      {
         "address": "0x05a3d1Cd21d0C88145E82600E62e7E496e0F222B",
         "name": "AMC Entertainment • Robinhood Token",
         "symbol": "AMC",
         "decimals": 18,
-        "priceUsd": 2.645
+        "priceUsd": 2.935
+      },
+      {
+        "address": "0x06c6f41D38456B1f09856eE2F5524Ed0Feeb98E8",
+        "name": "Stocked",
+        "symbol": "STOCKED",
+        "decimals": 18
+      },
+      {
+        "address": "0x0779369854d3EcdEA927206718FFD7730C67B71f",
+        "name": "RareFriends",
+        "symbol": "RAREFRIENDS",
+        "decimals": 18,
+        "priceUsd": 0.00110293
       },
       {
         "address": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
         "name": "WETH",
         "symbol": "WETH",
         "decimals": 18,
-        "priceUsd": 2473.377843621664
+        "priceUsd": 2685.7064834082776
       },
       {
         "address": "0x0E0d2C89a5a019FE1cF762e5e33187631DACC21B",
         "name": "Chump Coin",
         "symbol": "CHUMP",
         "decimals": 18,
-        "priceUsd": 0.03518132940064241
+        "priceUsd": 0.027799534444809884
+      },
+      {
+        "address": "0x0ff26C1B81511EB3FE722F49934Ab285884Ea9a3",
+        "name": "MADE",
+        "symbol": "MADE",
+        "decimals": 18
+      },
+      {
+        "address": "0x10B409f69989BC34E36a5105874f6d64E3eb0BfF",
+        "name": "Maple",
+        "symbol": "Maple",
+        "decimals": 18
+      },
+      {
+        "address": "0x116F00968269B7bfbaD4109cE591d6E74c0601d4",
+        "name": "Cloudflare, Inc. Class A common stock • Robinhood Token",
+        "symbol": "NET",
+        "decimals": 18,
+        "priceUsd": 344.445
+      },
+      {
+        "address": "0x117cc2133c37B721F49dE2A7a74833232B3B4C0C",
+        "name": "SPDR S&P 500 ETF Trust • Robinhood Token",
+        "symbol": "SPY",
+        "decimals": 18,
+        "priceUsd": 764.965
       },
       {
         "address": "0x11B70d0243baf75E85CE03201A92b5B7C33BEB59",
@@ -608,6 +692,19 @@
         "symbol": "ROBIN",
         "decimals": 18,
         "priceUsd": 0.00576423
+      },
+      {
+        "address": "0x11cE7a5a895B98300e901d2f8764437cc782DB96",
+        "name": "ngram",
+        "symbol": "NGRAM",
+        "decimals": 18
+      },
+      {
+        "address": "0x1258Af9d5E3f2A31E585711966Ac295B64ddF6A5",
+        "name": "Cestus Network",
+        "symbol": "CEST",
+        "decimals": 18,
+        "priceUsd": 0.00000873
       },
       {
         "address": "0x12D5ee7917cA430073C3A638ee1e6f0648A98a01",
@@ -621,7 +718,13 @@
         "name": "Pare",
         "symbol": "PARE",
         "decimals": 18,
-        "priceUsd": 0.01229123
+        "priceUsd": 0.00329676906709499
+      },
+      {
+        "address": "0x15f3d1ba06AEEb26470bF4995305F58082A20859",
+        "name": "Wire",
+        "symbol": "Wire",
+        "decimals": 18
       },
       {
         "address": "0x16391C40e85FB2246A2C8c17bfA2594C5d3EF84b",
@@ -631,11 +734,23 @@
         "priceUsd": 0.00460478
       },
       {
+        "address": "0x1B904029A4194A781cBD02EC47423e959501bc08",
+        "name": "Leão",
+        "symbol": "LEÃO",
+        "decimals": 18
+      },
+      {
         "address": "0x1C1DAEF0300551aDBfbE403e7d567b6c5aFF566f",
         "name": "hotdog",
         "symbol": "HOTDOG",
         "decimals": 18,
         "priceUsd": 0.0040227
+      },
+      {
+        "address": "0x1EA40D229b7105562589000cff557515725c0Ded",
+        "name": "TTT",
+        "symbol": "TTT",
+        "decimals": 18
       },
       {
         "address": "0x1Fe6434411E4332daba41291b2fBa2f6E46C0dED",
@@ -654,14 +769,39 @@
         "name": "GameStop • Robinhood Token",
         "symbol": "GME",
         "decimals": 18,
-        "priceUsd": 19.23
+        "priceUsd": 24.495
+      },
+      {
+        "address": "0x1b536dC1586E2Bf08b42805940Fb534ed729a06D",
+        "name": "1000X",
+        "symbol": "1000X",
+        "decimals": 18
+      },
+      {
+        "address": "0x1cDb289BeFDFaC8aF945a288BCdcCc382cB34d32",
+        "name": "X Link",
+        "symbol": "XL",
+        "decimals": 18,
+        "priceUsd": 0.00008891
       },
       {
         "address": "0x232CDFc415D10b673845D83Dc02ba2eaBe7e30d1",
         "name": "What If",
         "symbol": "IF",
         "decimals": 18,
-        "priceUsd": 0.009961098097742427
+        "priceUsd": 0.00043943708696417765
+      },
+      {
+        "address": "0x2555d7A1Fe8F5cdc89659eB48158F2b985731C67",
+        "name": "Plastic AP",
+        "symbol": "AP",
+        "decimals": 18
+      },
+      {
+        "address": "0x271FeB9b94bFb6bb8011D483347f6Dc11De02ba3",
+        "name": "Agrippa",
+        "symbol": "Agrippa",
+        "decimals": 18
       },
       {
         "address": "0x27E9d5067596132936427Ee311F05B339a50eBa6",
@@ -670,24 +810,49 @@
         "decimals": 18
       },
       {
+        "address": "0x28c5cF814CFfCA7A96a111C2E699B8cA8e78B304",
+        "name": "IPO",
+        "symbol": "IPO",
+        "decimals": 18
+      },
+      {
+        "address": "0x2E2EE261d70952e0267FE062A1d81411B94C0dEd",
+        "name": "test mascot2",
+        "symbol": "TEST2",
+        "decimals": 18
+      },
+      {
         "address": "0x2E8c31162b855A2ffa90F6F8634643Ad6F111e18",
         "name": "Artificial Inu",
         "symbol": "AI",
         "decimals": 18,
-        "priceUsd": 0.24852572022899952
+        "priceUsd": 0.14534267233342635
+      },
+      {
+        "address": "0x2a153323823A10a00e18E28749c8400298dBE45C",
+        "name": "Tape_ Markets",
+        "symbol": "TAPE",
+        "decimals": 18
+      },
+      {
+        "address": "0x2fC7f9E2911f20b2C4660d2AEf808aa91bDdb3D3",
+        "name": "Fly Trader",
+        "symbol": "Fly",
+        "decimals": 18
       },
       {
         "address": "0x319C5B3f8E46B70CB00769bC8020b4c08dDbc182",
         "name": "Scribble Network",
         "symbol": "SCRIB",
-        "decimals": 18
+        "decimals": 18,
+        "priceUsd": 0.00000787
       },
       {
         "address": "0x322F0929c4625eD5bAd873c95208D54E1c003b2d",
         "name": "Tesla • Robinhood Token",
         "symbol": "TSLA",
         "decimals": 18,
-        "priceUsd": 354.985
+        "priceUsd": 355.68
       },
       {
         "address": "0x32a3221e827962F305D8C5E1fe90b2e6cD8f784D",
@@ -719,7 +884,14 @@
         "name": "Pons",
         "symbol": "PONS",
         "decimals": 18,
-        "priceUsd": 0.740653033888788
+        "priceUsd": 0.5318616748633964
+      },
+      {
+        "address": "0x3df3644BCF4cE0d993E18C86c3080e53bFea06F1",
+        "name": "Be like Jacob",
+        "symbol": "Jacob",
+        "decimals": 18,
+        "priceUsd": 0.00009181
       },
       {
         "address": "0x420393B70a34d6AEf855EF56E87d4d4161F27C27",
@@ -727,6 +899,12 @@
         "symbol": "LIGER",
         "decimals": 18,
         "priceUsd": 0.00080922
+      },
+      {
+        "address": "0x433B8435a14bdCc41999C377c82bbE1d0C9b091d",
+        "name": "RAM",
+        "symbol": "RAM",
+        "decimals": 9
       },
       {
         "address": "0x446adB118f5F15F2a749E38288D4025b55F3e095",
@@ -739,27 +917,55 @@
         "name": "TENDIES",
         "symbol": "TENDIES",
         "decimals": 18,
-        "priceUsd": 0.014817108864464685
+        "priceUsd": 0.008809560440682134
+      },
+      {
+        "address": "0x46d7B18f7C0a946298cE7AE400df5384bf5addeF",
+        "name": "Let's End AI",
+        "symbol": "ENDAI",
+        "decimals": 18,
+        "priceUsd": 0.00000559
+      },
+      {
+        "address": "0x4Eb990547BCe4a982432CA88Cf5fae7EED1A2d35",
+        "name": "flybrain",
+        "symbol": "FLYBRAIN",
+        "decimals": 18,
+        "priceUsd": 0.00038782
       },
       {
         "address": "0x4a0E65A3EcceC6dBe60AE065F2e7bb85Fae35eEa",
         "name": "Space Exploration Technologies Corp. Class A Common Stock • Robinhood Token",
         "symbol": "SPCX",
         "decimals": 18,
-        "priceUsd": 148.57
+        "priceUsd": 152.28
+      },
+      {
+        "address": "0x4d066AB4D924b7b3D01c6EcbFC142efe33AEb7FA",
+        "name": "OpenJEV",
+        "symbol": "JEV",
+        "decimals": 18,
+        "priceUsd": 0.00003205
       },
       {
         "address": "0x507B6F349a80114097A67B8b4677367acC15b220",
         "name": "par",
         "symbol": "par",
-        "decimals": 18
+        "decimals": 18,
+        "priceUsd": 0.00065561
       },
       {
         "address": "0x5173D45A1191eE33cBB7D8c7e65f21B04eD54802",
         "name": "Ramses",
         "symbol": "RAM",
         "decimals": 18,
-        "priceUsd": 0.061148726465929726
+        "priceUsd": 0.04132311877140642
+      },
+      {
+        "address": "0x51d9aDdA1028F43804F6DA325CAc974835EC0dEd",
+        "name": "TTTT",
+        "symbol": "TTTT",
+        "decimals": 18
       },
       {
         "address": "0x5317C0d077D2eEB639448939b930D49c4984B63B",
@@ -774,25 +980,49 @@
         "decimals": 18
       },
       {
+        "address": "0x5457f8D9e586d359b1423052ac86b39afeC2C463",
+        "name": "deed.estate",
+        "symbol": "DEED",
+        "decimals": 9
+      },
+      {
+        "address": "0x55bC20A57f28B1BCfcce87310DCa4bD5ec78972F",
+        "name": "tttt",
+        "symbol": "TTTTT",
+        "decimals": 18
+      },
+      {
         "address": "0x56910D4409F3a0C78C64DD8D0545FF0705389870",
         "name": "The Index",
         "symbol": "Index",
         "decimals": 18,
-        "priceUsd": 0.04433394361397474
+        "priceUsd": 0.018375364502732125
+      },
+      {
+        "address": "0x5733507868F46D96907132F98431DCeEf67c69CC",
+        "name": "Agemica",
+        "symbol": "AGE",
+        "decimals": 18
       },
       {
         "address": "0x57C0E45cB534413D1C20A4240955d6bB250BB4F1",
         "name": "up",
         "symbol": "UP",
         "decimals": 18,
-        "priceUsd": 0.44943051462498773
+        "priceUsd": 0.33009935561272835
       },
       {
         "address": "0x5Cb6F181081301b44905F3ae15419112ecaBd8A6",
         "name": "pipedog",
         "symbol": "PIPEDOG",
         "decimals": 18,
-        "priceUsd": 0.002835049964114366
+        "priceUsd": 0.0016099827773052024
+      },
+      {
+        "address": "0x5E55f18453545d0D4314C5106a2D8Db934298E95",
+        "name": "Deed Estate",
+        "symbol": "DEED",
+        "decimals": 18
       },
       {
         "address": "0x5a8625d314fDd298101d87932A784b756A401e18",
@@ -806,14 +1036,39 @@
         "name": "Lil' Shrub",
         "symbol": "SHRUB",
         "decimals": 9,
-        "priceUsd": 0.005256181920912106
+        "priceUsd": 0.0001779297337309636
       },
       {
         "address": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
         "name": "Global Dollar",
         "symbol": "USDG",
         "decimals": 6,
-        "priceUsd": 0.9999675120505498
+        "priceUsd": 1.0001062607045104
+      },
+      {
+        "address": "0x61A4F9598a27682fF225E626af35650d27fCD8c3",
+        "name": "ttt",
+        "symbol": "TTT",
+        "decimals": 18
+      },
+      {
+        "address": "0x6245e67affA44a23077f0Ea7f981a8DC743a0c47",
+        "name": "frong",
+        "symbol": "FRONG",
+        "decimals": 18,
+        "priceUsd": 0.005233104970202812
+      },
+      {
+        "address": "0x648bF8A42D4546FDB9c840cB6eD78379e80bb0Dd",
+        "name": "QPULL",
+        "symbol": "QPULL",
+        "decimals": 18
+      },
+      {
+        "address": "0x6F3af61E9517776744EdC724b9afAA70E0A51E18",
+        "name": "MOONCOIN",
+        "symbol": "MOONCOIN",
+        "decimals": 18
       },
       {
         "address": "0x6b1d42927B1a84eC28Fa88d4fC6FA7AF404966be",
@@ -829,6 +1084,13 @@
         "decimals": 18
       },
       {
+        "address": "0x76912652A3ba152F506157f2D1072804cCf7dcD7",
+        "name": "Attention Flywheel",
+        "symbol": "FOMOBALL",
+        "decimals": 18,
+        "priceUsd": 0.0000102
+      },
+      {
         "address": "0x7CD7073A71eaF5F6E4febFA98460Ee66cd97dEb1",
         "name": "Biscotti",
         "symbol": "BISCOTTI",
@@ -836,11 +1098,23 @@
         "priceUsd": 0.00377682
       },
       {
+        "address": "0x7De1a8fF15BB1332eF6Eaff4C9a11703Ee1c0ded",
+        "name": "TT",
+        "symbol": "TT",
+        "decimals": 18
+      },
+      {
         "address": "0x7FE995a80075dF3Dc8Ae11A9b82c7FE4202CD87f",
         "name": "Thinking Cat",
         "symbol": "HMM",
         "decimals": 18,
-        "priceUsd": 0.01249267619510783
+        "priceUsd": 0.01418471073546999
+      },
+      {
+        "address": "0x7a492b0A2d630b94791Af846C1842Db9e623420c",
+        "name": "SuerMarioBrosCoin",
+        "symbol": "MARIO",
+        "decimals": 18
       },
       {
         "address": "0x7dbf38976f6D3b9c529e7D9484A71898B409eE6a",
@@ -857,11 +1131,56 @@
         "priceUsd": 0.00062291
       },
       {
+        "address": "0x80bAa4b3bfAC6f4978700dF824B1B3d98e889136",
+        "name": "Crumbs",
+        "symbol": "CRUMBS",
+        "decimals": 18,
+        "priceUsd": 0.00001735
+      },
+      {
         "address": "0x812486EAea648819853F8E372dc9f1516C7868Bd",
         "name": "ubik",
         "symbol": "UBIK",
         "decimals": 18,
         "priceUsd": 0.01879001
+      },
+      {
+        "address": "0x82eF09793c78f7CB6a2B6696fcdCA8E1c3581e18",
+        "name": "AGRIPPA",
+        "symbol": "AGRIPPA",
+        "decimals": 18
+      },
+      {
+        "address": "0x83a49B808F8d5e02CB2931cd2352988f498e5Ba3",
+        "name": "Agrippa",
+        "symbol": "Agrippa",
+        "decimals": 18,
+        "priceUsd": 0.00002541
+      },
+      {
+        "address": "0x848d3FC2660084b32971c1F58Ae46103d2B324AC",
+        "name": "Revenant",
+        "symbol": "REVENANT",
+        "decimals": 18
+      },
+      {
+        "address": "0x85Ef2Ee4cA09D19b03A7C5647c9776Bf4F6785A4",
+        "name": "STONKFLY",
+        "symbol": "STONKFLY",
+        "decimals": 18
+      },
+      {
+        "address": "0x88ad8DdF1E3898412146a534538d418c6F8A9062",
+        "name": "STANDARD",
+        "symbol": "STANDARD",
+        "decimals": 18,
+        "priceUsd": 0.246371
+      },
+      {
+        "address": "0x88ae0F8742C3Fdf455C5B3dECa8D15303b6C0DEd",
+        "name": "TTT",
+        "symbol": "TTT",
+        "decimals": 18
       },
       {
         "address": "0x89A9f41Ca7c17D845A8939624C73B6E386a8C494",
@@ -881,6 +1200,27 @@
         "symbol": "LEGS",
         "decimals": 18,
         "priceUsd": 0.00012154
+      },
+      {
+        "address": "0x8b3e3BA1A55b939f93F0a205F94520b9468e17f8",
+        "name": "RHIVIAN",
+        "symbol": "RIDE",
+        "decimals": 18,
+        "priceUsd": 0.00001744
+      },
+      {
+        "address": "0x8eaa17Be69AE9616cEDe4671e6d837bb89491E18",
+        "name": "Cat Processing Unit",
+        "symbol": "CPU",
+        "decimals": 18,
+        "priceUsd": 0.00070356
+      },
+      {
+        "address": "0x91A2DAe9699f0B82540B5886b0d8759C22820bA3",
+        "name": "musebook",
+        "symbol": "musebook",
+        "decimals": 18,
+        "priceUsd": 0.0000454
       },
       {
         "address": "0x98096d17e191B3dA1d5f99a6D7b3584351b11E18",
@@ -903,11 +1243,30 @@
         "decimals": 18
       },
       {
+        "address": "0xA379ad199e096Da5cad09963d4f0091F20dab1ae",
+        "name": "SuerMarioBrosCoin",
+        "symbol": "MARIO",
+        "decimals": 18
+      },
+      {
         "address": "0xAa07A0e9209e16aC99708C3EC70159c6eF3128A3",
         "name": "Orbio.so",
         "symbol": "ORBIO",
         "decimals": 18,
         "priceUsd": 0.00570259
+      },
+      {
+        "address": "0xB30fCC1d1dC674aE372CAB38AE73F4266De794fE",
+        "name": "row",
+        "symbol": "row",
+        "decimals": 18
+      },
+      {
+        "address": "0xB6a906D2D95E862Cf4FD43b9e30162AEe19EeD8d",
+        "name": "ZECFORGE.tech",
+        "symbol": "ZFORGE",
+        "decimals": 9,
+        "priceUsd": 0.0000194
       },
       {
         "address": "0xB934caBf87781f7eB13265DE4cB2ce090d00c4e3",
@@ -919,6 +1278,13 @@
         "address": "0xBEE455B5cd3A84b03871c779B018E7959be15bab",
         "name": "Fortune 500",
         "symbol": "500",
+        "decimals": 18,
+        "priceUsd": 0.00000496
+      },
+      {
+        "address": "0xBb09AbB73f766f00625852894eB5c9Cf08a94Ba3",
+        "name": "MacroStrategy",
+        "symbol": "MACRO",
         "decimals": 18
       },
       {
@@ -926,7 +1292,13 @@
         "name": "Robinvista",
         "symbol": "VISTA",
         "decimals": 18,
-        "priceUsd": 0.0015651915086362608
+        "priceUsd": 0.00019495301973833528
+      },
+      {
+        "address": "0xCCEDc1A562601EE9749EC7c759be6F76ccF60435",
+        "name": "tripad",
+        "symbol": "TRIPAD",
+        "decimals": 18
       },
       {
         "address": "0xCD1cca2B3d0A11b295c42fe765ea8f895c2D0901",
@@ -935,11 +1307,23 @@
         "decimals": 18
       },
       {
+        "address": "0xCEaa9679Aa4800C015e49D2751b726E8d4816636",
+        "name": "Superior Inu",
+        "symbol": "SI",
+        "decimals": 9
+      },
+      {
+        "address": "0xCc5DD3e55c1A3f5439D175de78132C020c9652C7",
+        "name": "PokePaired",
+        "symbol": "POKE",
+        "decimals": 18
+      },
+      {
         "address": "0xCceE82fE024c36fA15E1005edE3E9e4787e23D09",
         "name": "Hims & Hers Health • Robinhood Token",
         "symbol": "HIMS",
         "decimals": 18,
-        "priceUsd": 27.77
+        "priceUsd": 29.625
       },
       {
         "address": "0xD5f1afEA47b1A9eab414D2ee740cF1d6d039E725",
@@ -953,7 +1337,7 @@
         "name": "The Juggernaut",
         "symbol": "JUGGERNAUT",
         "decimals": 18,
-        "priceUsd": 0.003834689269731169
+        "priceUsd": 0.006410338296828293
       },
       {
         "address": "0xD9dB30BB0D2b8d2eae3826A1372117E058791e18",
@@ -983,9 +1367,22 @@
         "priceUsd": 0.00232229
       },
       {
+        "address": "0xEF82DDc566653699B89C3aFe123559a75aAA2976",
+        "name": "Superior Inu",
+        "symbol": "SI",
+        "decimals": 18,
+        "priceUsd": 0.00001217
+      },
+      {
         "address": "0xF05bCf94C8C020E43de8927B491c6BE8B96777E3",
         "name": "QUOTRON STRATEGY",
         "symbol": "QSTRAT",
+        "decimals": 18
+      },
+      {
+        "address": "0xF6e63DB21Ae8D780B26000d2CBE20802E07a0987",
+        "name": "DAWN",
+        "symbol": "DAWN",
         "decimals": 18
       },
       {
@@ -996,9 +1393,28 @@
         "priceUsd": 0.00014723
       },
       {
+        "address": "0xFB7710Bc08fE297d648b2617B8c1e25129D1a2F5",
+        "name": "XCoins",
+        "symbol": "XCOINS",
+        "decimals": 18,
+        "priceUsd": 0.00001455
+      },
+      {
         "address": "0xFDe2187CeA6Adb439EECAa9d406188923CA54a6d",
         "name": "ZisK",
         "symbol": "ZisK",
+        "decimals": 18
+      },
+      {
+        "address": "0xFd1a35778D9798F13c6fb97d29c07a5ce3F7fb5E",
+        "name": "OffYield Neobank",
+        "symbol": "OFY",
+        "decimals": 18
+      },
+      {
+        "address": "0xa0F22e53FfaC956FAADD15E24e7B606D285C0DED",
+        "name": "tttt",
+        "symbol": "TTTTT",
         "decimals": 18
       },
       {
@@ -1007,6 +1423,25 @@
         "symbol": "Investor",
         "decimals": 18,
         "priceUsd": 0.00012603
+      },
+      {
+        "address": "0xa391A584Ac7671758900806a1fDB4ef7c54c0ded",
+        "name": "TT",
+        "symbol": "TT",
+        "decimals": 18
+      },
+      {
+        "address": "0xa58B60e1c11f5669A36C9A65c27B38b2002Be7D4",
+        "name": "hoodship",
+        "symbol": "HOODSHIP",
+        "decimals": 18
+      },
+      {
+        "address": "0xa92768863a55d8A0591709f7f5E594A249d36Ea3",
+        "name": "heyaskr",
+        "symbol": "ASKR",
+        "decimals": 18,
+        "priceUsd": 0.00198069
       },
       {
         "address": "0xab093dEF657F15dF31b33922A95e047aDd645B29",
@@ -1022,6 +1457,25 @@
         "decimals": 18
       },
       {
+        "address": "0xb0BE8A40a960c18CA274010102509A4C19048B2f",
+        "name": "Real.fun",
+        "symbol": "REAL",
+        "decimals": 18
+      },
+      {
+        "address": "0xb827EC080b1bF5002dBf796B0fcA9E239409407d",
+        "name": "Worldie",
+        "symbol": "WORLDIE",
+        "decimals": 18
+      },
+      {
+        "address": "0xb911F04A24A9f6234537829290335e623ee71E18",
+        "name": "Uranus",
+        "symbol": "URANUS",
+        "decimals": 18,
+        "priceUsd": 0.00031445
+      },
+      {
         "address": "0xbD99c569001bD6BAd33F5cd954C6faDaf4298201",
         "name": "Oilinu",
         "symbol": "Oilinu",
@@ -1031,6 +1485,13 @@
         "address": "0xbe98b75361935b18d688409424a869a4C3dC7401",
         "name": "Send Nudes",
         "symbol": "NUDES",
+        "decimals": 18,
+        "priceUsd": 0.00053276
+      },
+      {
+        "address": "0xc0B3a7340F2daAa12615f31606133Bedcef28217",
+        "name": "OPAI",
+        "symbol": "OPAI",
         "decimals": 18
       },
       {
@@ -1038,7 +1499,7 @@
         "name": "Mancer",
         "symbol": "MANCER",
         "decimals": 18,
-        "priceUsd": 0.0019147697534403457
+        "priceUsd": 0.002015625287700745
       },
       {
         "address": "0xcDBb7008414aaf31de517Dfea5Bc1B09E9626690",
@@ -1058,7 +1519,25 @@
         "name": "NVIDIA • Robinhood Token",
         "symbol": "NVDA",
         "decimals": 18,
-        "priceUsd": 231.395
+        "priceUsd": 229.625
+      },
+      {
+        "address": "0xd6EbF5E428ad3c2E182e8818C861dEcc7D919103",
+        "name": "Leopardus Tilcayo",
+        "symbol": "TIGRINO",
+        "decimals": 9
+      },
+      {
+        "address": "0xdD84faAEA514A6E7FBd1A8Ed026EF06Fb276B72c",
+        "name": "TOPBLAST",
+        "symbol": "TOPBLAST",
+        "decimals": 18
+      },
+      {
+        "address": "0xdE1a4B8927769f8b6Ed07e5d5F49E7f649EbCbbd",
+        "name": "astronaut",
+        "symbol": "astro",
+        "decimals": 18
       },
       {
         "address": "0xded852De9fe9bA9b6f27f39e8e81CF851A5C79cc",
@@ -1066,6 +1545,19 @@
         "symbol": "ROBINCAT",
         "decimals": 18,
         "priceUsd": 0.00420082
+      },
+      {
+        "address": "0xe27501d787d647CC82a5B4a7Eafd5750386F1B77",
+        "name": "TWINE",
+        "symbol": "TWINE",
+        "decimals": 18,
+        "priceUsd": 0.00000951
+      },
+      {
+        "address": "0xe52C003F1A3abe8839447B1674d7BDA62047a8B4",
+        "name": "Dotsbook",
+        "symbol": "DOTS",
+        "decimals": 18
       },
       {
         "address": "0xe81880c1C5054245e036359f5c7be31606E79F56",
@@ -1090,19 +1582,25 @@
         "name": "Delta",
         "symbol": "DELTA",
         "decimals": 18,
-        "priceUsd": 0.01329341
+        "priceUsd": 0.016159754366076636
       },
       {
         "address": "0xe934e36A439C94017B64a3FecE66AF12099aBF50",
         "name": "StonkBroker",
         "symbol": "STONKBROKER",
         "decimals": 18,
-        "priceUsd": 0.014870201358905382
+        "priceUsd": 0.006488049538104884
       },
       {
         "address": "0xf3239df6f081F7c98bC5bA27FB24EEa66cd1D69c",
         "name": "Worthless Coin",
         "symbol": "WORTHLESS",
+        "decimals": 18
+      },
+      {
+        "address": "0xf3fb0722f678c6f431C873D0355cA12222B006C4",
+        "name": "Player vs Environment",
+        "symbol": "PVE",
         "decimals": 18
       },
       {
@@ -1116,7 +1614,7 @@
         "name": "Micron Technology • Robinhood Token",
         "symbol": "MU",
         "decimals": 18,
-        "priceUsd": 1021.88
+        "priceUsd": 1045.5900000000001
       }
     ]
   },
@@ -1124,137 +1622,176 @@
     "chainId": 8453,
     "tokens": [
       {
+        "address": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
+        "name": "Wrapped BTC",
+        "symbol": "WBTC",
+        "decimals": 8,
+        "priceUsd": 83748.19432946139
+      },
+      {
         "address": "0x0C1c1C109FE34733fca54b82d7B46B75CFb71F6e",
         "name": "Chip",
         "symbol": "CHIP",
         "decimals": 18,
-        "priceUsd": 0.05243970979566743
+        "priceUsd": 0.041704886649343624
       },
       {
         "address": "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
         "name": "Virtual Protocol",
         "symbol": "VIRTUAL",
         "decimals": 18,
-        "priceUsd": 0.7138009959306407
+        "priceUsd": 0.7860189095032385
+      },
+      {
+        "address": "0x30a3843b2FF215E722fc007FED2402c7D770d6a6",
+        "name": "tttt",
+        "symbol": "TTTT",
+        "decimals": 18
       },
       {
         "address": "0x3ec2156D4c0A9CBdAB4a016633b7BcF6a8d68Ea2",
         "name": "DebtReliefBot",
         "symbol": "DRB",
         "decimals": 18,
-        "priceUsd": 0.00021801179602040868
+        "priceUsd": 0.00022972610258057528
       },
       {
         "address": "0x4200000000000000000000000000000000000006",
         "name": "Wrapped Ether",
         "symbol": "WETH",
         "decimals": 18,
-        "priceUsd": 2472.311936040751
+        "priceUsd": 2691.859341729354
       },
       {
         "address": "0x56ab53b77F07DA3af732150E8aeC4783eB5BbA7D",
         "name": "Umia",
         "symbol": "UMIA",
         "decimals": 18,
-        "priceUsd": 0.639901436259534
+        "priceUsd": 0.6013726605368646
       },
       {
         "address": "0x5F980Dcfc4c0fa3911554cf5ab288ed0eb13DBa3",
         "name": "gitlawb",
         "symbol": "GITLAWB",
         "decimals": 18,
-        "priceUsd": 0.000016847386231835448
+        "priceUsd": 0.00002235972710686011
       },
       {
         "address": "0x5ab000ff9B9FfE0349CE5ffA5fD86f217C3680F5",
         "name": "The Stonks Exchange",
         "symbol": "STONKEX",
         "decimals": 18,
-        "priceUsd": 0.013449723026343926
+        "priceUsd": 0.006351118627217413
       },
       {
         "address": "0x60a3E35Cc302bFA44Cb288Bc5a4F316Fdb1adb42",
         "name": "EURC",
         "symbol": "EURC",
         "decimals": 6,
-        "priceUsd": 1.1609075233332196
+        "priceUsd": 1.1287476392212639
       },
       {
         "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
         "name": "USD Coin",
         "symbol": "USDC",
         "decimals": 6,
-        "priceUsd": 0.9998084399858657
+        "priceUsd": 0.9999188377040754
       },
       {
         "address": "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
         "name": "Aerodrome",
         "symbol": "AERO",
         "decimals": 18,
-        "priceUsd": 0.6458637317686676
+        "priceUsd": 0.7989554694412059
       },
       {
         "address": "0x9c5C365e764829876243d0b289733B9D2b729685",
         "name": "S&P 500 DeFi (Centrifuge)",
         "symbol": "deSPXA",
         "decimals": 18,
-        "priceUsd": 771.5298236837262
+        "priceUsd": 770.0639207582122
+      },
+      {
+        "address": "0x9d0E8f5b25384C7310CB8C6aE32C8fbeb645d083",
+        "name": "Derive",
+        "symbol": "DRV",
+        "decimals": 18,
+        "priceUsd": 0.4002162953006348
+      },
+      {
+        "address": "0xB095274743941e953c746F9C228DA9c18Bb6ec29",
+        "name": "LAPTOP",
+        "symbol": "LAPTOP",
+        "decimals": 18,
+        "priceUsd": 0.08069290809224795
       },
       {
         "address": "0xB2000000000000000000004c27f6523082f41D01",
         "name": "Basecat",
         "symbol": "Basecat",
         "decimals": 18,
-        "priceUsd": 0.04155202553493708
+        "priceUsd": 0.012733091058274673
       },
       {
         "address": "0xacfE6019Ed1A7Dc6f7B508C02d1b04ec88cC21bf",
         "name": "Venice Token",
         "symbol": "VVV",
         "decimals": 18,
-        "priceUsd": 18.887522404122755
+        "priceUsd": 27.321898789311483
       },
       {
         "address": "0xb2000000000000000000002D0BA3164cc74f58B7",
         "name": "Alphabet Inc.",
         "symbol": "GOOGLc",
         "decimals": 8,
-        "priceUsd": 336.95166150739556
+        "priceUsd": 350.12111707352494
       },
       {
         "address": "0xb20000000000000000000078ee7ce2fE4908108C",
         "name": "NVIDIA Corporation",
         "symbol": "NVDAc",
         "decimals": 8,
-        "priceUsd": 231.20590872529698
+        "priceUsd": 229.85506018031592
       },
       {
         "address": "0xb2000000000000000000008bC8786B856E61707C",
         "name": "Meta Platforms Inc.",
         "symbol": "METAc",
         "decimals": 8,
-        "priceUsd": 614.1540479980895
+        "priceUsd": 728.6482809414574
       },
       {
         "address": "0xb200000000000000000000C2e324d24d7eEcd1fb",
         "name": "Apple Inc.",
         "symbol": "AAPLc",
         "decimals": 8,
-        "priceUsd": 318.09067322570445
+        "priceUsd": 330.9398822135684
+      },
+      {
+        "address": "0xb522e24e82130138175971C12740CbB82C4DaE70",
+        "name": "Test on Base",
+        "symbol": "TBASE",
+        "decimals": 18
       },
       {
         "address": "0xc0634090F2Fe6c6d75e61Be2b949464aBB498973",
         "name": "Keeta",
         "symbol": "KTA",
         "decimals": 18,
-        "priceUsd": 0.07727738332996513
+        "priceUsd": 0.07054757137661628
       },
       {
         "address": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
         "name": "Coinbase Wrapped BTC",
         "symbol": "cbBTC",
         "decimals": 8,
-        "priceUsd": 78263.57143458298
+        "priceUsd": 83835.78085094811
+      },
+      {
+        "address": "0xd9aa150dd5900c95C58501B10a436905ed8f1352",
+        "name": "testbase2",
+        "symbol": "TB2",
+        "decimals": 18
       },
       {
         "address": "0xe8493db55696FC175f2C4070369ED286862c852d",
@@ -1278,35 +1815,35 @@
         "name": "Wrapped BTC",
         "symbol": "WBTC",
         "decimals": 8,
-        "priceUsd": 78143.11129903003
+        "priceUsd": 83472.0778368086
       },
       {
         "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
         "name": "Wrapped Ether",
         "symbol": "WETH",
         "decimals": 18,
-        "priceUsd": 2472.5461998378396
+        "priceUsd": 2691.859341729354
       },
       {
         "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
         "name": "USD₮0",
         "symbol": "USD₮0",
         "decimals": 6,
-        "priceUsd": 0.9997655678380042
+        "priceUsd": 0.9996963268462953
       },
       {
         "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
         "name": "USD Coin",
         "symbol": "USDC",
         "decimals": 6,
-        "priceUsd": 0.9998084399858657
+        "priceUsd": 0.9999188377040754
       },
       {
         "address": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
         "name": "Coinbase Wrapped BTC",
         "symbol": "cbBTC",
         "decimals": 8,
-        "priceUsd": 78263.57143458298
+        "priceUsd": 83835.78085094811
       }
     ]
   },
@@ -1318,28 +1855,28 @@
         "name": "Bitcoin",
         "symbol": "BTC.b",
         "decimals": 8,
-        "priceUsd": 78269.0053644498
+        "priceUsd": 83570.53508220558
       },
       {
         "address": "0x49D5c2BdFfac6CE2BFdB6640F4F80f226bc10bAB",
         "name": "Wrapped Ether",
         "symbol": "WETH.e",
         "decimals": 18,
-        "priceUsd": 2474.6316687836784
+        "priceUsd": 2684.2010257692127
       },
       {
         "address": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
         "name": "Wrapped AVAX",
         "symbol": "WAVAX",
         "decimals": 18,
-        "priceUsd": 8.028501127649982
+        "priceUsd": 10.974944809608653
       },
       {
         "address": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
         "name": "USD Coin",
         "symbol": "USDC",
         "decimals": 6,
-        "priceUsd": 0.9998084399858657
+        "priceUsd": 0.9999188377040754
       }
     ]
   }
